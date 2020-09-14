@@ -1,0 +1,217 @@
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color:#f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+#actionbutton {
+  float: right;
+  
+}
+
+.BreedingSetupClass{
+    display: none;
+}
+
+#NextDay{
+    display: none; 
+    position: absolute;
+    top: 900px;
+    left: 1100px;
+}
+
+
+#setup1 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 200px;
+  }
+  #setup2 {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    width: 200px;
+  }
+  #setup3 {
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    width: 200px;
+  }
+  #setup4 {
+    position: absolute;
+    top: 200px;
+    left: 850px;
+    width: 200px;
+  }
+
+  #setup5 {
+    position: absolute;
+    top: 200px;
+    left: 1100px;
+    width: 200px;
+  }  
+
+  #setup6 {
+    position: absolute;
+    top: 200px;
+    left: 1350px;
+    width: 200px;
+  }  
+
+
+  .setupAll {
+    position: absolute;
+    top: 500px;
+    left: 450px;
+    width: 400px;
+  }
+
+.Day0Class{
+  display: none; 
+}
+
+#zf_day0{
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 750px;
+  width: 200px;  
+}
+
+#NextDay2{
+  display: none;
+  position: absolute;
+  top: 500px;
+  left: 1300px;
+  width: 150px; 
+}
+
+
+.Day1Class{
+  display: none; 
+}
+
+#zf_day1_deadzoom{
+  display: none;
+  position: absolute;
+  top: 400px;
+  left: 350px;
+  width: 400px;  
+}
+
+#closeImg{
+  display: none;
+  position: absolute;
+  top: 400px;
+  left: 745px;
+  width: 10px;  
+}
+
+#zf_day1_before{  
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  width: 400px;  
+}
+
+#zf_day1_after{
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: 900px;
+  width: 400px;  
+}
+
+#button3{
+  
+  position: absolute;
+  top: 800px;
+  left: 700px;
+  width: 250px;  
+}
+
+#button_DevStages{
+  
+  position: absolute;
+  top: 800px;
+  left: 1500px;
+  width: 250px;  
+}
+
+
+#DevelopmentQuiz {
+  display: none;
+}
+
+#GoTailTest {
+  display: none;
+  position: absolute;
+  top: 500px;
+  left : 50px; 
+}
+
+#ZfDevPic{
+  position: absolute;
+  top: 150;
+  height: 250px;
+}
+
+#EnterTestQuiz{
+  position: absolute;
+  top: 500px;
+  left : 250px;  
+}
+#DevQuizText{
+  position: absolute;
+  top: 500px;
+  left : 50px;  
+}
+
+#ChiSquaredTest{
+  display: none;
+}
+
+#TailTest2{
+  display: none;
+}
+
+#GoGenotype{
+  display: none;
+}
+#GoChisquareID{
+  display: none;
+}

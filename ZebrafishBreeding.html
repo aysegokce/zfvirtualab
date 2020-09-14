@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Zebrafish Virtual Lab</title>
+  <link rel="stylesheet" href="ZebrafishBreeding.css">
+
+</head>
+<body>
+
+<h2>Zebrafish Virtual Lab</h2>
+
+<div class="tab">
+   <button class="tablinks" onclick="openCity(event, 'Gender')">Breeding Setup</button>
+   <button class="tablinks" onclick="openCity(event, 'Development')">Development</button>
+  <button class="tablinks" onclick="openCity(event, 'TailTest')">Tail Test</button>
+  <button class="tablinks" onclick="openCity(event, 'Genotyping')">Genotyping</button>
+  
+  
+</div>
+
+
+
+
+
+
+<div id="Gender" class = "tabcontent" >
+
+  <div id = "FishSelect" >
+  <p>Please select one male and one female fish for breeding <br> 
+  <table style= "width:80%">
+    <tr> <th>MALE</th>
+      <th>FEMALE</th>
+    </tr>
+    <tr>
+      <td>
+  <input type = radio name="male" id="male1" value = "male_a">
+    <label for= male1> <img src="zebrafish.png" width = 150px>
+          </label>
+  </td>              
+<td>
+      <input type = radio name="female" id="female1" value = "female_a">
+    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+      </td>
+      </tr>
+    <tr>
+      <td>
+  <input type = radio name="male" id="male1" value = "male_b">
+    <label for= male1> <img src="zebrafish.png" width = 150px>
+          </label>
+  </td>              
+<td>
+      <input type = radio name="female" id="female1" value = "female_b">
+    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+      </td>
+      </tr>
+    <tr>
+      <td>
+  <input type = radio name="male" id="male1" value = "male_c">
+    <label for= male1> <img src="zebrafish.png" width = 150px>
+          </label>
+  </td>              
+<td>
+      <input type = radio name="female" id="female1" value = "female_c" >
+    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+      </td>
+      </tr>
+  </table>
+  <br>
+  <input type="button" name = "button1" id = "actionbutton" value ="Go to breeding Setup"  onclick = "openBreedingSetup()">
+  </p>
+</div>
+
+  <div id = "BreedingSetup", class = "BreedingSetupClass">
+      <img id = "setup1" src="setup1.jpg" onclick = "clicksetup(1)"> 
+      <img id = "setup2" src="setup2.jpg" onclick = "clicksetup(0)"> 
+      <img id = "setup3" src="setup3.jpg" onclick = "clicksetup(0)" > 
+      <img id = "setup4" src="setup4.jpg" onclick = "clicksetup(0)"> 
+      <img id = "setup6" src="setup5.jpg" onclick = "clicksetup(0)">
+      <img id = "setup5" src="zebrafish.png" onclick = "clicksetup(0)">
+      <img id = "setupAll123456" class="setupAll" src="setupAll123456.jpg"> 
+      <img id = "setupAll12345" class="setupAll" src="setupAll12345.jpg"> 
+      <img id = "setupAll1234" class="setupAll" src="setupAll1234.jpg" > 
+      <img id = "setupAll123" class="setupAll" src="setupAll123.jpg" > 
+      <img id = "setupAll12" class="setupAll" src="setupAll12.jpg" > 
+      <img id = "setupAll1" class="setupAll" src="setup1.jpg" > 
+      <img id = "setupAll0" class="setupAll" src="setupAll0.jpg"  > 
+      <input type="button" name = "button1" id = "NextDay" value ="Next Day"  onclick = "Day0()">
+
+  </div>
+
+  <div id = "Day0", class = "Day0Class">
+
+    <p> Early in the morning separator will be removed. 4-5h later embryos will be ready to collect.
+       Embryos will be collected and grown in E3 medium in petri dish <br> 
+       Before collecting embryos E3 medium needs to be prepared. Luckly we have 60X E3 medium at hand.
+       Recipe for 2lt 60X E3 medium is; <ul> 
+        <li>34.8 g NaCl</li>
+        <li>1.6 g KCl</li>
+        <li>5.8 g CaCl2·2H2O</li>
+        <li>9.78 g MgCl2·6H2O</li>
+        <li>Dissolve them in water and adjust pH to 7.2.</li>
+      </ul>
+    100&micro;l of 1% methylene blue should be added to 1x E3 medium. <br>
+  You need to prepare 1x E3 medium. How much 60X E3 medium you need ? <br>
+<input type= "text" id = "E3mediumID" onchange = "E3mediumcheck()" > &micro;l <br>
+</p>
+
+<img id = "zf_day0" src="zf_day0.jpg"> 
+<input type = "button" name= "button2" id= "NextDay2" value = "Next Day" onclick = "Day1()">
+
+ </div>
+
+ <div id= "Day1", class = "Day1Class">
+   <p> Embryos are 1dpf now. You need to remove dead embryos and change E3 medium. <br>
+   </p>
+   
+     <img id ="zf_day1_before" src ="zf_day1_before.jpg" onclick="zoomInDead('before')">
+     <img id ="zf_day1_deadzoom" src ="zf_day1_deadzoom.jpg" >
+     <input type="button" id="button3" id="RemoveDead", value="Remove Dead Embryos" , onclick="removeDead()">
+     <img id ="zf_day1_after" src ="zf_day1_after.jpg" onclick="zoomInDead('after')">
+     <img id= "closeImg" src ="close.png" onclick="zoomOutDead()">
+     <input type ="button" id = "button_DevStages" value = "Go to developmental stages" onclick = "openCity(event, 'Development')">
+
+ 
+
+ </div>
+
+
+
+    
+  </div>
+
+  <div id="Development" class="tabcontent">
+    <div id = "DevelopmentVideo">
+        <h1> Zebrafish Developmental Stages </h1>
+        <p>Watch timelapse microscopy recordings of Zebrafish developement for 72h <br>
+        Press Ready when you are ready to take quiz <hr>
+        <iframe  id = "ZfDevelopment"  width="893" height="502" src="https://www.youtube.com/embed/EeHiA98yUa4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+        <input type ="button" value = "Take Quiz" id="DevQuizButton" class = "actionbutton" onclick= "DevQuiz()">
+      </div>  
+
+      <div id ="DevelopmentQuiz">
+        <p>Please Enter Approximate developmental time point fo shown embryo </p>
+          <img src="zf_1.jpg" id="ZfDevPic" >
+          <input type= "number" id="DevQuizText" > hpf</p>
+          <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >
+          <input type = "button" id= "GoTailTest" value = "Proceed to tail test" onclick="openCity(event, 'TailTest')">
+
+        </div>
+    
+      
+    </div>
+
+ <div id="TailTest" class="tabcontent">
+   <div id = "TailTestPred">
+     <p> Enter number of embryos you want to test: <br>
+    <input type= "number" id="TailTestNumofEmbryoID" > embryos</p>
+    <input type=button onclick="TailTestNumofEmbryo()" id="EnterTailTestNumofEmbryo" value="Enter" >
+  </div>
+  <div id="TailTest2">
+    <img src="tailtest_1.gif" id="TailTestGif" class = "TestPred">
+    <p><input type= "radio" name="TailtestPredID" id="Para" class = "TestPred" value = "Paralyzed"> 
+      <label for="Para">Paralyzed</label>
+      <input type= "radio" name="TailtestPredID" id="healthy" class = "TestPred" value = "Not-Paralyzed">       
+      <label for="healthy">Healthy</label>
+
+      <input type=button onclick="TailtestPred()" class = "TestPred" id="EnterTailtestPred" value="Check" >
+      <input type=button onclick="GoChisquare()" class = "TestPred" id="GoChisquareID" value="View Summary" ></p>
+   </div>
+
+
+  <div id = "ChiSquaredTest">
+    <p> Summary of Tail Test; </p>
+    <table id="TailTestSumTable">
+        <tr>
+        <th>Paralyzed </th> <th> NotParalyzed</th> </tr>
+        <tr>          
+          <td>Paralyzed</td>
+          <td>Notparalyzed</td>
+        </tr>
+        
+      </table>
+      <br> 
+      <hr>
+      <p>Enter Expected and Observed values for chi-sqaured test</p>
+
+      <table id="ChiSquaredTable">
+        <tr>
+        <th>  </th><th>Expected </th> <th> Observed </th> </tr>
+        <tr>
+          <th>Paralyzed</th>
+          <td><input type= "number" id = "exp1"></td>
+          <td><input type= "number" id = "pred1"></td>
+        </tr>
+        <tr>
+           <th>NotParalyzed</th>
+          <td><input type= "number" id = "exp2"></td>
+          <td><input type= "number" id = "pred2"></td>
+        </tr>
+      </table>
+      <br> 
+      
+      <button onclick="chiSquared()">Calculate</button>
+      
+      <p id="demo"></p>
+
+      <input type = "button" id= "GoGenotype" value = "Proceed to Genotyping" onclick="openCity(event, 'Genotyping')">
+
+
+  </div>
+
+
+    
+
+          </div>
+    
+
+    <div id="Genotyping" class="tabcontent">
+          <p>Now your embryos are 5 days old and ready to DNA extraction for genotyping. 
+            But first you need to prepare DNA Extraction Buffer. Here is the recipe:<ul>
+              <li></li>
+            </ul></p>
+            <input type= "button" value = "click" id= "clickbutton" ></p>
+          </div>
+          
+         
+
+
+
+
+
+
+  <script  src="ZebrafishBreeding.js"></script>
+
+</body>
+</html>
