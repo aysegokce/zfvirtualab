@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Zebrafish Virtual Lab</title>
   <link rel="stylesheet" href="ZebrafishBreeding.css">
-
+  <script src = "https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
 
@@ -19,8 +19,11 @@
   
 </div>
 
-
-
+<div id = "Home" >
+  <h2>This is home page</h2>
+  <h3>Some info</h3>
+  <input type ="button" id="button_Home" value="Start with breeding setup"  class = "actionbutton" onclick="openCity(event, 'Gender')">
+</div>
 
 
 
@@ -35,34 +38,34 @@
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_a">
-    <label for= male1> <img src="zebrafish.png" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_a">
-    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
       </td>
       </tr>
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_b">
-    <label for= male1> <img src="zebrafish.png" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_b">
-    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
       </td>
       </tr>
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_c">
-    <label for= male1> <img src="zebrafish.png" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_c" >
-    <label for= female1> <img src="zebrafish.png" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
       </td>
       </tr>
   </table>
@@ -72,27 +75,53 @@
 </div>
 
   <div id = "BreedingSetup", class = "BreedingSetupClass">
-      <img id = "setup1" src="setup1.jpg" onclick = "clicksetup(1)"> 
-      <img id = "setup2" src="setup2.jpg" onclick = "clicksetup(0)"> 
-      <img id = "setup3" src="setup3.jpg" onclick = "clicksetup(0)" > 
-      <img id = "setup4" src="setup4.jpg" onclick = "clicksetup(0)"> 
-      <img id = "setup6" src="setup5.jpg" onclick = "clicksetup(0)">
-      <img id = "setup5" src="zebrafish.png" onclick = "clicksetup(0)">
-      <img id = "setupAll123456" class="setupAll" src="setupAll123456.jpg"> 
-      <img id = "setupAll12345" class="setupAll" src="setupAll12345.jpg"> 
-      <img id = "setupAll1234" class="setupAll" src="setupAll1234.jpg" > 
-      <img id = "setupAll123" class="setupAll" src="setupAll123.jpg" > 
-      <img id = "setupAll12" class="setupAll" src="setupAll12.jpg" > 
-      <img id = "setupAll1" class="setupAll" src="setup1.jpg" > 
-      <img id = "setupAll0" class="setupAll" src="setupAll0.jpg"  > 
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup_BreedingSetup0()">&times;</div>
+        <h1>Breeding setup</h1>
+      <img id ="BreedingSetupVideo0" src= "https://drive.google.com/thumbnail?id=1qI2ljh9QtrG_D3962vjOSXNr4-JQw-Cb">
+      </div>
+    </div>   
+    
+    
+    Now prepare breeding setup for the selected fish. You need to pick each object in correct order.
+    <button onclick="togglePopup_BreedingSetup0()">Watch Video</button>  
+    <img id = "setup1" src="https://drive.google.com/uc?export=view&id=1KThqVa6b3smWo2KSiDiVFdozAJOT3-WY" onclick = "clicksetup(1)"> 
+      <img id = "setup2" src="https://drive.google.com/uc?export=view&id=1ILEYY_KjjRl8jFQH97kLQIlXKzGkOEQp" onclick = "clicksetup(0)"> 
+      <img id = "setup3" src="https://drive.google.com/uc?export=view&id=1unWNmgpEsOBokcO5pT84Xuw8gADNGUkP" onclick = "clicksetup(0)" > 
+      <img id = "setup4" src="https://drive.google.com/uc?export=view&id=18jpQwYAwiuDtNeHt1jfPeqcCEQvS_BTD" onclick = "clicksetup(0)"> 
+      <img id = "setup6" src="https://drive.google.com/uc?export=view&id=1Ru8x1xN3Ab-79_vlKl0SLWdyadisnRqd" onclick = "clicksetup(0)">
+      <img id = "setup5" src="https://drive.google.com/uc?export=view&id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" onclick = "clicksetup(0)">
+      <img id = "setupAll123456" class="setupAll" src="https://drive.google.com/uc?export=view&id=1eUIQe_lLo4v8HHVxcMBOEpXRq2m4HPDf"> 
+      <img id = "setupAll12345" class="setupAll" src="https://drive.google.com/uc?export=view&id=1lZSMo1fhM1phBCrzJbfhf3f8Z7KSWm8y"> 
+      <img id = "setupAll1234" class="setupAll" src="https://drive.google.com/uc?export=view&id=1y37zLsEmwyxkiyNnRYLGJUZwaIdBpFVO" > 
+      <img id = "setupAll123" class="setupAll" src="https://drive.google.com/uc?export=view&id=1iRIymO3hu089VIETWwqSAaqhjHOqog-P" > 
+      <img id = "setupAll12" class="setupAll" src="https://drive.google.com/uc?export=view&id=1SFZsfrYGD2AQ5eAV46Rsmr2csFTrd3D3" > 
+      <img id = "setupAll1" class="setupAll" src="https://drive.google.com/uc?export=view&id=1KThqVa6b3smWo2KSiDiVFdozAJOT3-WY" > 
+      <img id = "setupAll0" class="setupAll" src="https://drive.google.com/uc?export=view&id=1Ml8ZB6_yGK6zAGrkFDDxRwhIW5gIIOCk"  > 
+      <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_BreedingSetup1()">&times;</div>        
+        <img id ="BreedingSetupVideo1" src= "https://drive.google.com/uc?export=view&id=16lY370o2Z7msQu-SanoGazs_wUR262ab">
+        </div>
+      </div> 
+      <button id="togglebutton1" onclick="togglePopup_BreedingSetup1()">Ready</button> 
       <input type="button" name = "button1" id = "NextDay" value ="Next Day"  onclick = "Day0()">
-
+      
   </div>
 
   <div id = "Day0", class = "Day0Class">
+    <div class="popup" id="popup-3">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup_BreedingSetup2()">&times;</div>        
+      <img id ="CollectEmbryoID" src= "CollectEmbryo.gif">
+      </div>
+    </div> 
 
-    <p> Early in the morning separator will be removed. 4-5h later embryos will be ready to collect.
-       Embryos will be collected and grown in E3 medium in petri dish <br> 
+    <p> Early in the morning separator is removed. After 4-5h embryos now ready to collect.<br> 
        Before collecting embryos E3 medium needs to be prepared. Luckly we have 60X E3 medium at hand.
        Recipe for 2lt 60X E3 medium is; <ul> 
         <li>34.8 g NaCl</li>
@@ -103,7 +132,9 @@
       </ul>
     100&micro;l of 1% methylene blue should be added to 1x E3 medium. <br>
   You need to prepare 1x E3 medium. How much 60X E3 medium you need ? <br>
-<input type= "text" id = "E3mediumID" onchange = "E3mediumcheck()" > &micro;l <br>
+<input type= "text" id = "E3mediumID" onchange = "E3mediumcheck()" > ml <br>
+<p id = "demo2"></p>
+<button id="togglebutton2" onclick="togglePopup_BreedingSetup2()">Collect Embryo</button> 
 </p>
 
 <img id = "zf_day0" src="zf_day0.jpg"> 
@@ -112,14 +143,20 @@
  </div>
 
  <div id= "Day1", class = "Day1Class">
-   <p> Embryos are 1dpf now. You need to remove dead embryos and change E3 medium. <br>
+  <div class="popup" id="popup-4">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="removeDead()">&times;</div>        
+    <img id ="removedeadID" src= "removdead.gif" height="300">
+    </div>
+  </div> 
+
+   <p> Embryos are 1dpf now. We need to remove dead embryos and change E3 medium. <br>
    </p>
    
-     <img id ="zf_day1_before" src ="zf_day1_before.jpg" onclick="zoomInDead('before')">
-     <img id ="zf_day1_deadzoom" src ="zf_day1_deadzoom.jpg" >
+     <img id ="zf_day1_before" src ="zf_day1_before.jpg" >      
      <input type="button" id="button3" id="RemoveDead", value="Remove Dead Embryos" , onclick="removeDead()">
-     <img id ="zf_day1_after" src ="zf_day1_after.jpg" onclick="zoomInDead('after')">
-     <img id= "closeImg" src ="close.png" onclick="zoomOutDead()">
+     <img id ="zf_day1_after" src ="zf_day1_after.jpg">
      <input type ="button" id = "button_DevStages" value = "Go to developmental stages" onclick = "openCity(event, 'Development')">
 
  
@@ -142,9 +179,9 @@
       </div>  
 
       <div id ="DevelopmentQuiz">
-        <p>Please Enter Approximate developmental time point fo shown embryo </p>
-          <img src="zf_1.jpg" id="ZfDevPic" >
-          <input type= "number" id="DevQuizText" > hpf</p>
+        <p>Please Enter Approximate developmental time point of shown embryo </p>
+          <img src="Zygote.png" id="ZfDevPic" > 
+          <input type= "number" id="DevQuizNum"> <p id = "hpf">hpf</p>
           <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >
           <input type = "button" id= "GoTailTest" value = "Proceed to tail test" onclick="openCity(event, 'TailTest')">
 
@@ -202,7 +239,7 @@
       </table>
       <br> 
       
-      <button onclick="chiSquared()">Calculate</button>
+      <button onclick="chiSquared(1)">Calculate</button>
       
       <p id="demo"></p>
 
@@ -218,12 +255,252 @@
     
 
     <div id="Genotyping" class="tabcontent">
+      <div id = "DNAExtractionBuffer">
           <p>Now your embryos are 5 days old and ready to DNA extraction for genotyping. 
             But first you need to prepare DNA Extraction Buffer. Here is the recipe:<ul>
-              <li></li>
-            </ul></p>
-            <input type= "button" value = "click" id= "clickbutton" ></p>
+              <li>100mM Tris pH 8.2</li>
+              <li>10mM EDTA </li>
+              <li>200mM NaCl</li>
+              <li>0.5% SDS</li>
+            </ul>
+          Fortunatelly you have stock solution for them. You need 20ml DNA extraction buffer. 
+          Write down how much of these stock solution is needed.</p>
+          <figure id= "TrisFalcon">
+            <img src="falcon.png" height="250" >
+            <figcaption>1M Tris pH 8.2</figcaption>
+        </figure>
+        <figure id= "EdtaFalcon">
+          <img src="falcon.png" height="250" >
+            <figcaption>100mM EDTA</figcaption>
+        </figure>
+        <figure id= "NaclFalcon">
+          <img src="falcon.png" height="250" >
+          <figcaption>1M NaCl</figcaption>
+      </figure>
+      <figure id= "SDSFalcon">
+        <img src="falcon.png" height="250" >
+        <figcaption>10% SDS</figcaption>
+      </figure>
+      <figure id= "waterFalcon">
+        <img src="falcon.png" height="250" >
+        <figcaption>dH2O</figcaption>
+      </figure>
+      <figure class= "DNAFalcon" id= "DNAFalcon6">
+        <img src="falcon5.png" height="350" >
+      </figure>
+      <figure class= "DNAFalcon" id= "DNAFalcon5">
+        <img src="falcon4.png" height="350" >
+      </figure>
+      <figure class= "DNAFalcon" id= "DNAFalcon4">
+        <img src="falcon3.png" height="350">
+      </figure>
+
+      <figure class= "DNAFalcon" id= "DNAFalcon3">
+        <img src="falcon2.png" height="350" >
+      </figure>
+
+      <figure class= "DNAFalcon" id= "DNAFalcon2">
+        <img src="falcon1.png" height="350" >
+      </figure>
+
+      <figure class= "DNAFalcon" id= "DNAFalcon1">
+        <img src="falcona.png" height="350">
+      </figure>
+
+
+ <p id = "ml1">ml</p>
+ <p id = "ml2">ml</p>
+ <p id = "ml3">ml</p>
+ <p id = "ml4">ml</p>
+ <p id = "ml5">ml</p>
+
+      <input type = "number" , id = "TrisAmount">
+      <input type = "button" , class = "ADDext" id ="AddTrisAmount", value = "ADD" onclick="DNAExt('tris')">      
+      <input type = "number" , id = "EdtaAmount">
+      <input type = "button" ,class = "ADDext" id ="AddEdtaAmount", value = "ADD" onclick="DNAExt('edta')">      
+      <input type = "number" , id = "NaclAmount">
+      <input type = "button" ,class = "ADDext" id ="AddNaclAmount", value = "ADD" onclick="DNAExt('nacl')">
+      <input type = "number" , id = "SDSAmount">
+      <input type = "button" ,class = "ADDext" id ="AddSDSAmount", value = "ADD" onclick="DNAExt('sds')">
+      <input type = "number" , id = "waterAmount">
+      <input type = "button" ,class = "ADDext" id ="AddwaterAmount", value = "ADD" onclick="DNAExt('water')">
+      <input type = "button" , id ="NextStage", value = "Go to Next Stage" onclick="DNAextStage2()">
+
+    </div>
+    <div id="DNAExtraction" >
+      Now DNA extraction buffer is ready. You can start DNA extraction.
+      <figure  id= "Buffer">
+        <img src="falcon5.png" height="250" >
+        <figcaption>DNAExtraction buffer</figcaption>
+      </figure>
+      <figure  id= "ProtainaseK">
+        <img src="eppendorf.jpg" height="150" >
+        <figcaption>Proteinase K</figcaption>
+      </figure>
+      <figure  id= "embryo">
+        <img src="embryo.png" height="50" >
+        <figcaption>5dpf Embryo</figcaption>
+      </figure>
+
+      <figure class= "eppendorf" id= "eppendorf4">
+        <img src="eppendorf2_2.png" height="250" >
+      </figure>
+      <figure class= "eppendorf" id= "eppendorf3">
+        <img src="eppendorf2_3.png" height="250" >
+      </figure>
+      <figure class= "eppendorf" id= "eppendorf2">
+        <img src="eppendorf2_2.png" height="250" >
+      </figure>
+      <figure class= "eppendorf" id= "eppendorf1">
+        <img src="eppendorf3.png" height="250" >
+      </figure>
+      <figure id= "HeatBlockimg">
+        <img src="heatblock.jpg" height="250" >
+        <figcaption>Arranged to 55 C   </figcaption>
+      </figure>
+
+      <input type = "button" value = "Put embryo to eppendorf"  id = "AddEmby", onclick="DNAext2(1)">
+      <input type = "button" value = "Remove excess water"  id = "removewat", onclick="DNAext2(2)">
+      <input type = "button" value = "Add 198&#181;l DNA extraction Buffer"  id = "AddExtBuffer", onclick="DNAext2(3)">
+      <input type = "button" value = "Add 2&#181;l ProtainaseK"  id = "AddProteinaseK", onclick="DNAext2(4)">
+      <input type = "button" value = "Place it to Heatblock"  id = "HeatBlock", onclick="DNAext2(5)">
+      <input type = "button" value = "O/N incubation at 55C"  id = "DNAextDay2", onclick="DNAext2(6)">
+
+    </div>
+    
+    <div id = "DNAExtractionDay2">
+      Embryos were incubated at 55C O/N. 
+      Now place them to 95C heatblock and incubate them for 20 min. 
+      <input type = "button" , value = "Next Step"  id = "NextstepDNAext" onclick= "DNAext3(1)">      
+
+           
+       <img id ="eppendorf_day2a" src="eppendorf.jpg" height="150" >
+       <img  id ="eppendorf_day2b" src="eppendorf_day2b.jpg" height="150" >  
+       <img class ="eppendorf_day2cd" id ="eppendorf_day2c" src="eppendorf.jpg" height="150" >  
+       <img class ="eppendorf_day2cd" id ="eppendorf_day2d" src="eppendorf_day2d.jpg" height="150" >
+       <img class ="eppendorf_day2efg" id ="eppendorf_day2e" src="eppendorf_day2e.jpg" height="150" > 
+       <img class ="eppendorf_day2efg" id ="eppendorf_day2f" src="eppendorf_day2f.jpg" height="150" >   
+       <img class ="eppendorf_day2efg" id ="eppendorf_day2g" src="eppendorf_day2e.jpg" height="150" >
+       <img class ="eppendorf_day2hij" id ="eppendorf_day2h" src="eppendorf_day2e.jpg" height="150" >
+       <img class ="eppendorf_day2hij" id ="eppendorf_day2hi" src="eppendorf_day2f.jpg" height="150" >
+       <img class ="eppendorf_day2hij" id ="eppendorf_day2i" src="eppendorf_day2i.png" height="150" > 
+       <img class ="eppendorf_day2hij" id ="eppendorf_day2j" src="eppendorf_day2j.jpg" height="150" >                        
+      
+
+      <input type = "button" value = "Centrifuge at 13000rpm for 20m (RT)"  id = "Centrifuge1", onclick="DNAext3(2)">
+      <input type = "button" value = "Transfer supernatant to /n new eppendorf"  id = "supernatant1", onclick="DNAext3(3)">
+      <input type = "button" class ="Centrifuge2isop"  value = "Add isopropanol"  id = "isop", onclick="DNAext3(4)">
+      <input type = "button" class ="Centrifuge2isop" value = "Centrifuge at 13000rpm for 20m (+4)"  id = "Centrifuge2", onclick="DNAext3(5)">
+      <input type = "button" class ="Centrifuge3etoh" value = "Discard supernatant"  id = "supernatant2", onclick="DNAext3(6)">
+      <input type = "button" class ="Centrifuge3etoh" value = "Add 70% EtoH"  id = "etoh", onclick="DNAext3(7)">
+      <input type = "button" class ="Centrifuge3etoh" value = "Centrifuge at 13000rpm for 20m (+4)"  id = "Centrifuge3", onclick="DNAext3(8)">
+      <input type = "button" class ="extfinal" value = "Discard supernatant"  id = "supernatant3", onclick="DNAext3(9)">
+      <input type = "button" class ="extfinal" value = "Air dry"  id = "airdry", onclick="DNAext3(10)">
+      <input type = "button" class ="extfinal" value = "Dissolve DNA with 15&#181;l NFW"  id = "supernatant4", onclick="DNAext3(11)">
+      <input type = "button"class ="extfinal" value = "Measure DNA amount"  id = "gotonanodrop", onclick="DNAext3(12)">
+      
+
+    </div>
+
+    <div id="nanodrop">
+      <table>
+        <tr><th>Embryo</th><th>260/230</th><th>260/280</th><th>ng/&#181;l</th>
+        </tr>
+        <tbody class = "table1" id = "tbody_1" ></tbody>
+      </table>
+      <input type = "button"  value = "Go to qPCR" id="GotoqPCR" onclick="gotoqpcr()">
+    </div>
+
+    <div id = "QPCR">
+      Recipe for 10&#181;l  qPCR reaction mix (per sample);
+      <ul>
+        <li> 5 &#181;l SYBR Green Master mix </li>
+        <li> 1 &#181;l Forward Primer </li>
+        <li> 1 &#181;l Reverse Primer</li>
+        <li> 2 &#181;l DNA </li>
+        <li> 1 &#181;l Nuclease free water </li>
+      </ul>
+      Now we need to prepare master mix for each primer set. 
+      Calculate required amout of each ingredient for 10 samples.<br>
+      <em>Hint: Note that you will include two technical replicates.</em> 
+     <table>
+       <tr><th>Ingredient</th><th>S Primer Set</th><th>N Primer Set</th> </tr>
+       <tr><td>SYBR Green Master mix</td>
+        <td><input type="number" id="Syber_S"></td>
+        <td><input type="number" id="Syber_N"></td></tr>
+        <tr><td>Forward Primer S</td>
+          <td><input type="number" id="SP_S"></td>
+          <td><input type="number" id="SP_N"></td></tr>
+          <tr><td>Forward Primer N</td>
+            <td><input type="number" id="NP_S"></td>
+            <td><input type="number" id="NP_N"></td></tr>
+            <tr><td>Reverse Primer</td>
+              <td><input type="number" id="RP_S"></td>
+              <td><input type="number" id="RP_N"></td></tr>
+              <tr><td>Nuclease Free water</td>
+                <td><input type="number" id="NFW_S"></td>
+                <td><input type="number" id="NFW_N"></td></tr>
+     </table>
+
+     <input type="button" id="mastermix" value = "Prepare Master mix"  onclick="Checkmastermix()">
+
+    </div>
+
+    <div id = QPCRres>
+
+      We performed qPCR with 10 samples and 2 technical replicates per sample. We got the results as below.
+      Now we need to count wt, mutant and heterozygous. 
+
+      <table>
+        <tr><th>Embryo</th><th>260/230</th><th>260/280</th><th>ng/&#181;l</th>
+          <th>S_CT1</th><th>S_CT2</th><th>N_CT1</th><th>N_CT2</th>
+        </tr>
+        <tbody class = "table1" id ="tbody_2" ></tbody>
+      </table>
+    
+
+    <table id="ChiSquaredTable2">
+      <tr>
+      <th>  </th><th>Expected </th> <th> Observed </th> </tr>
+      <tr>
+        <th>wt</th>
+        <td><input type= "number" id = "exp1b"></td>
+        <td><input type= "number" id = "pred1b"></td>
+      </tr>
+      <tr>
+         <th>mutant</th>
+        <td><input type= "number" id = "exp2b"></td>
+        <td><input type= "number" id = "pred2b"></td>
+      </tr>
+      <th>heterozygous</th>
+      <td><input type= "number" id = "exp3b"></td>
+      <td><input type= "number" id = "pred3b"></td>
+    </tr>
+
+    </table>
+    <br> 
+    
+    <button onclick="chiSquared(2)">Calculate</button>
+
+    <p id = "demo3"></p>
+    <select size="1" id="EnterPredGenType">
+      <option value="wt" selected="selected">
+          wt x wt
+      </option>
+      <option value="wthet">
+          wt x het
+      </option>
+      <option value="het">
+          het x het
+      </option>
+  </select>
+
+  <input type ="button" value = "Submit" id = "CheckGentypeID" onclick="CheckGentype()">
+</div>
+   
           </div>
+
+          
           
          
 
