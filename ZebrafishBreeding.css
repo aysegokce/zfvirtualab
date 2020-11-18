@@ -1,8 +1,36 @@
 /* Style the tab */
+body {
+  font-size:18px;
+}
+input[type=button]{
+  background-color: rgba(54, 125, 167, 0.877);
+  font-size:18px;
+  border: none;
+  color: white;
+  
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=number]{
+  font-size:16px;
+}
+
+
+#button_Home{  
+  position: absolute;
+  top: 700px;
+  left: 1500px;
+  width: 250px;  
+}
+
+
+
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color:#f1f1f1;
+  background-color: rgba(54, 125, 167, 0.877);
 }
 
 /* Style the buttons inside the tab */
@@ -14,24 +42,24 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
+  color: white;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: rgba(2, 153, 240, 0.37);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: rgba(2, 153, 240, 0.719);
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
 }
 
@@ -48,7 +76,7 @@
 #NextDay{
     display: none; 
     position: absolute;
-    top: 900px;
+    top: 700px;
     left: 1100px;
 }
 
@@ -125,26 +153,12 @@
   display: none; 
 }
 
-#zf_day1_deadzoom{
-  display: none;
-  position: absolute;
-  top: 400px;
-  left: 350px;
-  width: 400px;  
-}
 
-#closeImg{
-  display: none;
-  position: absolute;
-  top: 400px;
-  left: 745px;
-  width: 10px;  
-}
 
 #zf_day1_before{  
   position: absolute;
   top: 300px;
-  left: 250px;
+  left: 150px;
   width: 400px;  
 }
 
@@ -152,22 +166,23 @@
   display: none;
   position: absolute;
   top: 300px;
-  left: 900px;
+  left: 1000px;
   width: 400px;  
 }
 
 #button3{
   
   position: absolute;
-  top: 800px;
+  top: 700px;
   left: 700px;
   width: 250px;  
 }
 
 #button_DevStages{
+  display : none;
   
   position: absolute;
-  top: 800px;
+  top: 700px;
   left: 1500px;
   width: 250px;  
 }
@@ -187,15 +202,22 @@
 #ZfDevPic{
   position: absolute;
   top: 150;
+  left : 50px;
   height: 250px;
+}
+
+#hpf{
+  position: absolute;
+  top: 485px;
+  left : 260px; 
 }
 
 #EnterTestQuiz{
   position: absolute;
-  top: 500px;
-  left : 250px;  
+  top: 490px;
+  left : 300px;  
 }
-#DevQuizText{
+#DevQuizNum{
   position: absolute;
   top: 500px;
   left : 50px;  
@@ -215,3 +237,450 @@
 #GoChisquareID{
   display: none;
 }
+
+#TrisFalcon{
+  position: absolute;
+  top: 300px;
+  left : 50px;  
+}
+
+#EdtaFalcon{
+  position: absolute;
+  top: 300px;
+  left : 300px;  
+}
+
+#NaclFalcon{
+  position: absolute;
+  top: 300px;
+  left : 550px;  
+}
+
+#SDSFalcon{
+  position: absolute;
+  top: 300px;
+  left : 800px;  
+}
+
+#waterFalcon{
+  position: absolute;
+  top: 300px;
+  left : 1050px;  
+}
+
+.DNAFalcon{
+  position: absolute;
+  top: 650px;
+  left : 550px;  
+}
+
+
+.ADDext{
+  font-size: 16;  
+  padding: 8px 16px;
+  margin: 2px 1px;
+}
+
+#TrisAmount{  
+  position: absolute;
+  top: 610px;
+  left : 65px; 
+  width : 90px;
+
+}
+#ml1{ 
+  position: absolute;
+  top: 595px;
+  left : 165px;
+
+}
+
+#EdtaAmount{
+  display : none;
+  position: absolute;
+  top: 610px;
+  left : 315px; 
+  width : 90px;
+
+}
+#ml2{  
+  display : none;
+  position: absolute;
+  top: 595px;
+  left : 415px;
+
+}
+
+#NaclAmount{
+  display : none;
+  position: absolute;
+  top: 610px;
+  left : 565px; 
+  width : 90px;
+
+}
+
+#ml3{ 
+  display : none; 
+  position: absolute;
+  top: 595px;
+  left : 665px;
+
+}
+
+#SDSAmount{
+  display : none;
+  position: absolute;
+  top: 610px;
+  left : 815px; 
+  width : 90px;
+
+}
+
+#ml4{
+  display : none;  
+  position: absolute;
+  top: 595px;
+  left : 915px;
+
+}
+
+#waterAmount{
+  display : none;
+  position: absolute;
+  top: 610px;
+  left : 1065px; 
+  width : 90px;
+
+}
+#ml5{
+  display : none;  
+  position: absolute;
+  top: 595px;
+  left : 1165px;
+
+}
+
+
+#AddTrisAmount{  
+  position: absolute;
+  top: 600px;
+  left : 185px; 
+
+}
+
+#AddEdtaAmount{
+  display : none;
+  position: absolute;
+  top: 600px;
+  left : 434px; 
+
+}
+
+#AddNaclAmount{
+  display : none;
+  position: absolute;
+  top: 600px;
+  left : 685px; 
+
+}
+
+#AddSDSAmount{
+  display : none;
+  position: absolute;
+  top: 600px;
+  left : 935px; 
+
+}
+#AddwaterAmount{
+  display : none;
+  position: absolute;
+  top: 600px;
+  left : 1185px; 
+
+}
+
+#NextStage{
+  display : none;
+  position: absolute;
+  top: 600px;
+  left : 1300px; 
+}
+
+#DNAExtraction{
+  display: none;
+}
+
+#embryo{
+  position: absolute;
+  bottom: 400px;
+  left : 50px; 
+}
+#Buffer{
+  position: absolute;
+  bottom: 400px;
+  left : 350px; 
+}
+#ProtainaseK{
+  position: absolute;
+  bottom: 400px;
+  left : 700px; 
+}
+
+#HeatBlockimg{
+  display: none;
+  position: absolute;
+  top: 550px;
+  left : 1000px; 
+}
+
+.eppendorf{  position: absolute;
+  top: 650px;
+  left : 350px;
+}
+
+#AddEmby{
+  position: absolute;
+  top: 550px;
+  left : 50px; 
+}
+#removewat{
+  display : none;
+  position: absolute;
+  top: 755px;
+  left : 600px; 
+}
+#AddExtBuffer{
+  display : none;
+  position: absolute;
+  top: 550px;
+  left : 350px; 
+}
+#AddProteinaseK{
+  display : none;
+  position: absolute;
+  top: 550px;
+  left : 700px; }
+
+
+#HeatBlock{
+  display : none;
+  position: absolute;
+  top: 715px;
+  left : 550px; 
+}
+
+#DNAextDay2{
+  display : none;
+  position: absolute;
+  top: 550px;
+  left : 1450px; 
+}
+
+
+#DNAExtractionDay2{
+  display : none;
+}
+
+
+#eppendorf_day2a{
+  display : none;
+  position: absolute;
+  top: 250px;
+  left : 50px; 
+}
+
+#eppendorf_day2b{
+  display : none;
+  position: absolute;
+  top: 250px;
+  left : 300px; 
+}
+
+.eppendorf_day2cd{
+  display : none;
+  position: absolute;
+  top: 250px;
+  left : 550px; 
+}
+
+.eppendorf_day2efg{
+  display : none;
+  position: absolute;
+  top: 250px;
+  left : 800px; 
+}
+
+.eppendorf_day2hij{
+  display : none;
+  position: absolute;
+  top: 250px;
+  left : 1050px; 
+}
+
+
+#Centrifuge1{
+  display : none;
+  position: absolute;
+  top: 320px;
+  left : 150px;
+  width : 150px;
+  white-space: normal;
+}
+
+#supernatant1{
+  display : none;
+  position: absolute;
+  top: 320px;
+  left : 400px;
+  width : 150px;
+  white-space: normal;
+}
+
+
+.Centrifuge2isop{
+  display : none;
+  position: absolute;
+  top: 320px;
+  left : 650px;
+  width : 150px;
+  white-space: normal;
+}
+
+.Centrifuge3etoh{
+  display : none;
+  position: absolute;
+  top: 320px;
+  left : 900px;
+  width : 150px;
+  white-space: normal;
+}
+
+.extfinal{
+  display : none;
+  position: absolute;
+  top: 320px;
+  left : 1150px;
+  width : 150px;
+  white-space: normal;
+}
+
+
+#nanodrop{
+  display : none;
+
+}
+#QPCR{
+  display: none;
+}
+
+#QPCRres{
+  display:none;
+}
+
+
+.table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table1 td, .table1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 100px;
+}
+
+.table1 tr:nth-child(even){background-color: #f2f2f2;}
+
+.table1 tr:hover {background-color: #ddd;}
+
+.table1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1e87a7;
+  color: white;
+}
+
+
+
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+#togglebutton1{
+  display: none;
+    position: absolute;
+    top: 700px;
+    left: 1100px;
+    background-color: rgba(54, 125, 167, 0.877);
+  font-size:18px;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#togglebutton2{
+  display: none;
+  position: absolute;
+  top: 500px;
+  left: 1300px;
+  width: 150px; 
+  background-color: rgba(54, 125, 167, 0.877);
+  font-size:18px;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
