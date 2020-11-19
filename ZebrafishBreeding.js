@@ -232,8 +232,7 @@ var devEndArray = [1,1,2,4,4,4,6,10,11,16,20,24,40,72,85];
 function DevQuizRand(){     
     
     randomNum = Math.floor(Math.random() * myPix.length);   
-    document.getElementById("ZfDevPic").src = myPix[randomNum];
-    alert(myPix[randomNum])   
+    document.getElementById("ZfDevPic").src = myPix[randomNum];  
     }
      
 
@@ -271,7 +270,6 @@ function TailTestNumofEmbryo(){
     document.getElementById("TailTest2").style.display = "block";
     tailtestvideos();
     TailtestGifShow();
-    alert(gentype)
 
 }
 
@@ -368,21 +366,14 @@ function tailtestvideos(){
         }
 
 if (gentype ==  "het"){
-
     paralyzedVid=shuffle(paralyzedVid);
     nonparalyzedVid=shuffle(nonparalyzedVid);    
     var wn=Math.floor(Math.random() * 4)-2;    
     var npar = Math.ceil(testCount/4 + wn);    
     paralyzedVid = paralyzedVid.slice(0, npar);
     nonparalyzedVid = nonparalyzedVid.slice(0, testCount-npar);
-    testvid = paralyzedVid;
-    alert("test")
-    alert(testvid)
-    alert(paralyzedVid)
-    alert(nonparalyzedVid)
-    testvid=testvid.concat(nonparalyzedVid);
-    alert("test2")
-    alert(testvid)
+    testvid = paralyzedVid;    
+    testvid=testvid.concat(nonparalyzedVid);    
     testvid = shuffle(testvid);
     }
     else{
@@ -396,11 +387,12 @@ var shownvid=0;
 function TailtestGifShow(){
     
     document.getElementById("TailTestGif").src = testvid[shownvid];
-    alert(testvid)   
+      
    
     }
   
  function   TailtestPred(){ 
+   document.getElementById("TailTestGif").style.display="none";
     var checkpheno =document.querySelector('input[name="TailtestPredID"]:checked').value; 
     
      if (checkpheno == "Paralyzed"){        
@@ -418,6 +410,7 @@ function TailtestGifShow(){
         }        
 
         TailtestGifShow()
+        document.getElementById("TailTestGif").style.display="block";
      
     }
     else if ( shownvid == testCount-1){
@@ -816,8 +809,6 @@ function NanoDropTable(order){
         return testvid.includes(hero.name);
     });
     var globalCounter = 0;
-    alert(JSON.stringify(nanoQPCRres));
-    alert(JSON.stringify(filtqPCRres));
 var tbody = document.getElementById('tbody_1');
 
 for (var i = 0; i < Object.keys(filtqPCRres).length; i++) {
