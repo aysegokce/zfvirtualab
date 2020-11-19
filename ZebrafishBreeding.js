@@ -392,7 +392,6 @@ function TailtestGifShow(){
     }
   
  function   TailtestPred(){ 
-    document.getElementById("TailTestGif").style.display="none";
     var checkpheno =document.querySelector('input[name="TailtestPredID"]:checked').value; 
     
      if (checkpheno == "Paralyzed"){        
@@ -415,7 +414,6 @@ function TailtestGifShow(){
      
     }
     else if ( shownvid == testCount-1){
-    document.getElementsByName("TailtestPredID").style.display = "none";
     document.getElementById("EnterTailtestPred").style.display = "none";
     document.getElementById("GoChisquareID").style.display = "block";  
     }
