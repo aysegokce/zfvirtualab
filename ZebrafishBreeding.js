@@ -403,6 +403,7 @@ function TailtestGifShow(){
         nonparalyzed++;
      }
      if  (shownvid < testCount-1){
+       document.getElementById("TailTestGif").style.display="none";
         shownvid++;
         var ele = document.getElementsByName("TailtestPredID");
         for(var i=0;i<ele.length;i++){
