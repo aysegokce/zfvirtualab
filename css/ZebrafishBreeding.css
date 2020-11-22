@@ -21,8 +21,7 @@ input[type=number]{
 
 #button_Home{  
   position: absolute;
-  top: 700px;
-  left: 1500px;
+  float: right;
   width: 250px;  
 }
 
