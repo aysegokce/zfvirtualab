@@ -1,10 +1,10 @@
 /* Style the tab */
 body {
-  font-size:18px;
+  font-size:130%;
 }
 input[type=button]{
   background-color: rgba(54, 125, 167, 0.877);
-  font-size:18px;
+  font-size:20px;
   border: none;
   color: white;
   
@@ -15,7 +15,7 @@ input[type=button]{
 }
 
 input[type=number]{
-  font-size:16px;
+  font-size:20px;
 }
 
 
@@ -42,7 +42,7 @@ input[type=number]{
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 24px;
   color: white;
 }
 
@@ -73,11 +73,15 @@ input[type=number]{
     display: none;
 }
 
+
+
+
 #NextDay{
     display: none; 
     position: absolute;
     top: 700px;
-    left: 1100px;
+    left: 1150px;
+    font-size: 20;
 }
 
 
@@ -85,39 +89,39 @@ input[type=number]{
     position: absolute;
     top: 200px;
     left: 100px;
-    width: 200px;
+    width: 220px;
   }
   #setup2 {
     position: absolute;
     top: 200px;
     left: 350px;
-    width: 200px;
+    width: 220px;
   }
   #setup3 {
     position: absolute;
     top: 200px;
     left: 600px;
-    width: 200px;
+    width: 220px;
   }
   #setup4 {
     position: absolute;
     top: 200px;
     left: 850px;
-    width: 200px;
+    width: 220px;
   }
 
   #setup5 {
     position: absolute;
     top: 200px;
     left: 1100px;
-    width: 200px;
+    width: 220px;
   }  
 
   #setup6 {
     position: absolute;
     top: 200px;
     left: 1350px;
-    width: 200px;
+    width: 220px;
   }  
 
 
@@ -125,7 +129,7 @@ input[type=number]{
     position: absolute;
     top: 500px;
     left: 450px;
-    width: 400px;
+    width: 600px;
   }
 
 .Day0Class{
@@ -146,6 +150,7 @@ input[type=number]{
   top: 500px;
   left: 1300px;
   width: 150px; 
+  
 }
 
 
@@ -184,7 +189,6 @@ input[type=number]{
   position: absolute;
   top: 700px;
   left: 1500px;
-  width: 250px;  
 }
 
 
@@ -212,6 +216,8 @@ input[type=number]{
   left : 260px; 
 }
 
+
+
 #EnterTestQuiz{
   position: absolute;
   top: 490px;
@@ -220,7 +226,8 @@ input[type=number]{
 #DevQuizNum{
   position: absolute;
   top: 500px;
-  left : 50px;  
+  left : 50px; 
+  width: 200px; 
 }
 
 #ChiSquaredTest{
@@ -240,38 +247,39 @@ input[type=number]{
 
 #TrisFalcon{
   position: absolute;
-  top: 300px;
+  top: 400px;
   left : 50px;  
 }
 
 #EdtaFalcon{
   position: absolute;
-  top: 300px;
+  top: 400px;
   left : 300px;  
 }
 
 #NaclFalcon{
   position: absolute;
-  top: 300px;
+  top: 400px;
   left : 550px;  
 }
 
 #SDSFalcon{
   position: absolute;
-  top: 300px;
+  top: 400px;
   left : 800px;  
 }
 
 #waterFalcon{
   position: absolute;
-  top: 300px;
+
+  top: 400px;
   left : 1050px;  
 }
 
 .DNAFalcon{
   position: absolute;
-  top: 650px;
-  left : 550px;  
+  top: 350px;
+  left : 1350px;  
 }
 
 
@@ -283,14 +291,14 @@ input[type=number]{
 
 #TrisAmount{  
   position: absolute;
-  top: 610px;
+  top: 710px;
   left : 65px; 
   width : 90px;
 
 }
 #ml1{ 
   position: absolute;
-  top: 595px;
+  top: 695px;
   left : 165px;
 
 }
@@ -298,7 +306,7 @@ input[type=number]{
 #EdtaAmount{
   display : none;
   position: absolute;
-  top: 610px;
+  top: 710px;
   left : 315px; 
   width : 90px;
 
@@ -306,7 +314,7 @@ input[type=number]{
 #ml2{  
   display : none;
   position: absolute;
-  top: 595px;
+  top: 695px;
   left : 415px;
 
 }
@@ -314,7 +322,7 @@ input[type=number]{
 #NaclAmount{
   display : none;
   position: absolute;
-  top: 610px;
+  top: 710px;
   left : 565px; 
   width : 90px;
 
@@ -323,7 +331,7 @@ input[type=number]{
 #ml3{ 
   display : none; 
   position: absolute;
-  top: 595px;
+  top: 695px;
   left : 665px;
 
 }
@@ -331,7 +339,7 @@ input[type=number]{
 #SDSAmount{
   display : none;
   position: absolute;
-  top: 610px;
+  top: 710px;
   left : 815px; 
   width : 90px;
 
@@ -340,7 +348,7 @@ input[type=number]{
 #ml4{
   display : none;  
   position: absolute;
-  top: 595px;
+  top: 695px;
   left : 915px;
 
 }
@@ -348,7 +356,7 @@ input[type=number]{
 #waterAmount{
   display : none;
   position: absolute;
-  top: 610px;
+  top: 710px;
   left : 1065px; 
   width : 90px;
 
@@ -356,7 +364,7 @@ input[type=number]{
 #ml5{
   display : none;  
   position: absolute;
-  top: 595px;
+  top: 695px;
   left : 1165px;
 
 }
@@ -364,7 +372,7 @@ input[type=number]{
 
 #AddTrisAmount{  
   position: absolute;
-  top: 600px;
+  top: 700px;
   left : 185px; 
 
 }
@@ -372,7 +380,7 @@ input[type=number]{
 #AddEdtaAmount{
   display : none;
   position: absolute;
-  top: 600px;
+  top: 700px;
   left : 434px; 
 
 }
@@ -380,7 +388,7 @@ input[type=number]{
 #AddNaclAmount{
   display : none;
   position: absolute;
-  top: 600px;
+  top: 700px;
   left : 685px; 
 
 }
@@ -388,14 +396,14 @@ input[type=number]{
 #AddSDSAmount{
   display : none;
   position: absolute;
-  top: 600px;
+  top: 700px;
   left : 935px; 
 
 }
 #AddwaterAmount{
   display : none;
   position: absolute;
-  top: 600px;
+  top: 700px;
   left : 1185px; 
 
 }
@@ -404,7 +412,7 @@ input[type=number]{
   display : none;
   position: absolute;
   top: 600px;
-  left : 1300px; 
+  left : 1550px; 
 }
 
 #DNAExtraction{
@@ -657,9 +665,9 @@ input[type=number]{
   display: none;
     position: absolute;
     top: 700px;
-    left: 1100px;
+    left: 1150px;
     background-color: rgba(54, 125, 167, 0.877);
-  font-size:18px;
+  font-size:20px;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -675,7 +683,7 @@ input[type=number]{
   left: 1300px;
   width: 150px; 
   background-color: rgba(54, 125, 167, 0.877);
-  font-size:18px;
+  font-size:20px;
   border: none;
   color: white;
   padding: 12px 24px;
