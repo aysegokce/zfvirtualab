@@ -30,7 +30,7 @@
 <div id="Gender" class = "tabcontent" >
 
   <div id = "FishSelect" >
-  <p>Please select one male and one female fish for breeding <br> 
+  <p>Please select one male and one female fish for breeding <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_sexdiff()"> <br> 
   <table style= "width:80%">
     <tr> <th>MALE</th>
       <th>FEMALE</th>
@@ -38,43 +38,55 @@
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_a">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_a">
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
       </td>
       </tr>
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_b">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_b">
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
       </td>
       </tr>
     <tr>
       <td>
   <input type = radio name="male" id="male1" value = "male_c">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
           </label>
   </td>              
 <td>
       <input type = radio name="female" id="female1" value = "female_c" >
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 150px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
       </td>
       </tr>
   </table>
   <br>
-  <input type="button" name = "button1" id = "actionbutton" value ="Go to breeding Setup"  onclick = "openBreedingSetup()">
+  <input type="button" name = "button1" id = "actionbutton" value ="Go to breeding setup"  onclick = "openBreedingSetup()">
   </p>
 </div>
+<div class="popup" id="popup-sexdiff">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup_sexdiff()">&times;</div>
+    <img id ="sexdiff" src= "https://drive.google.com/uc?id=1frKvxZ5Usjhtk1FtO2yq4RpayiPDjzFn">
+    </div>
+  </div>
 
-  <div id = "BreedingSetup", class = "BreedingSetupClass">
+    
+
+
+
+
+  <div id = "BreedingSetup" class = "BreedingSetupClass">
     <div class="popup" id="popup-1">
       <div class="overlay"></div>
       <div class="content">
@@ -121,6 +133,15 @@
       </div>
     </div> 
 
+    <div class="popup" id="popup-E3">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_E3()">&times;</div>        
+        <img src= "https://drive.google.com/uc?id=1goArVlQW6fmeOlE0pLSiSfCXgOw4FeW2">
+        </div>
+      </div> 
+
+
     <p> Early in the morning separator is removed. After 4-5h embryos now ready to collect.<br> 
        Before collecting embryos E3 medium needs to be prepared. Luckly we have 60X E3 medium at hand.
        Recipe for 2lt 60X E3 medium is; <ul> 
@@ -131,8 +152,8 @@
         <li>Dissolve them in water and adjust pH to 7.2.</li>
       </ul>
     100&micro;l of 1% methylene blue should be added to 1x E3 medium. <br>
-  You need to prepare 1x E3 medium. How much 60X E3 medium you need ? <br>
-<input type= "text" id = "E3mediumID" onchange = "E3mediumcheck()" > ml <br>
+  You need to prepare 1x E3 medium. How much 60X E3 medium you need ? <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_E3()"> <br>
+<input type= "number" id = "E3mediumID" onchange = "E3mediumcheck()" > ml <br>
 <p id = "demo2"></p>
 <button id="togglebutton2" onclick="togglePopup_BreedingSetup2()">Collect Embryo</button> 
 </p>
@@ -155,7 +176,7 @@
    </p>
    
      <img id ="zf_day1_before" src ="https://drive.google.com/thumbnail?id=17Ow-VuyoMdsODKwIUK5-m4BQ2ZKPAEXk" >      
-     <input type="button" id="button3" id="RemoveDead", value="Remove Dead Embryos" , onclick="removeDead()">
+     <input type="button" id="button3" id="RemoveDead", value="Remove dead embryos" , onclick="removeDead()">
      <img id ="zf_day1_after" src ="https://drive.google.com/thumbnail?id=1AUZQvPfFLSGHfMF6Qt07srNeXMri8j2r">
      <input type ="button" id = "button_DevStages" value = "Go to developmental stages" onclick = "openCity(event, 'Development')">
 
@@ -179,7 +200,7 @@
       </div>  
 
       <div id ="DevelopmentQuiz">
-        <p>Please Enter Approximate developmental time point of shown embryo </p>
+        <p>Please Enter Approximate developmental time point of shown embryo <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_devstages()"> </p>
           <img src="https://drive.google.com/thumbnail?id=1anE_yZSEmNZQmLQLIBjrOJLRrr5j-yjh" id="ZfDevPic" > 
           <input type= "number" id="DevQuizNum"> <p id = "hpf">hpf</p>
           <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >
@@ -190,9 +211,18 @@
       
     </div>
 
+    <div class="popup" id="popup-devstages">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_devstages()">&times;</div>        
+        <img src= "https://drive.google.com/uc?id=1bPmJAQiVrUWoVzdi09itJFeRgVK5sYx_" width = "85%">
+        </div>
+      </div> 
+
+
  <div id="TailTest" class="tabcontent">
    <div id = "TailTestPred">
-     <p> Enter number of embryos you want to test: <br>
+     <p> Enter number of embryos you want to test (1-12) <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_tailtest()">: <br>
     <input type= "number" id="TailTestNumofEmbryoID" > embryos</p>
     <input type=button onclick="TailTestNumofEmbryo()" id="EnterTailTestNumofEmbryo" value="Enter" >
   </div>
@@ -207,9 +237,25 @@
       <input type=button onclick="GoChisquare()" class = "TestPred" id="GoChisquareID" value="View Summary" ></p>
    </div>
 
+   <div class="popup" id="popup-tailtest">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup_tailtest()">&times;</div>        
+    <img src= "https://drive.google.com/uc?id=1HIFpRnKHkwbE1v1FTUqMgOcw8Z73g6r1">
+    </div>
+  </div> 
+
+  <div class="popup" id="popup-chisquare1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup_chisquare1()">&times;</div>        
+    <img src= "https://drive.google.com/uc?id=1ReVR9ENBBaxt4bGAQ-_ufTYHqrIscRMW">
+    </div>
+  </div> 
+
 
   <div id = "ChiSquaredTest">
-    <p> Summary of Tail Test; </p>
+    <p> Summary of tail test; </p>
     <table id="TailTestSumTable">
         <tr>
         <th>Paralyzed </th> <th> NotParalyzed</th> </tr>
@@ -221,7 +267,7 @@
       </table>
       <br> 
       <hr>
-      <p>Enter Expected and Observed values for chi-sqaured test</p>
+      <p>Enter expected and observed values for chi-squared test <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_chisquare1()"></p>
 
       <table id="ChiSquaredTable">
         <tr>
@@ -252,7 +298,15 @@
     
 
           </div>
-    
+
+          <div class="popup" id="popup-ext_dil">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup_ext_dil()">&times;</div>        
+            <img src= "https://drive.google.com/uc?id=1LeQhRBzLG9bvFgqz1G84V6YTpPFcy3Zj">
+            </div>
+          </div> 
+
 
     <div id="Genotyping" class="tabcontent">
       <div id = "DNAExtractionBuffer">
@@ -264,7 +318,7 @@
               <li>0.5% SDS</li>
             </ul>
           Fortunatelly you have stock solution for them. You need 20ml DNA extraction buffer. 
-          Write down how much of these stock solution is needed.</p>
+          Write down how much of these stock solution is needed. <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_ext_dil()"></p>
           <figure id= "TrisFalcon">
             <img src="https://drive.google.com/thumbnail?id=1r2ybo_xRvd8YOznrW5COuXEDVfZSNmS3" height="250" >
             <figcaption>1M Tris pH 8.2</figcaption>
@@ -286,25 +340,26 @@
         <figcaption>dH2O</figcaption>
       </figure>
       <figure class= "DNAFalcon" id= "DNAFalcon6">
-        <img src="https://drive.google.com/thumbnail?id=1YduIwbZBJJ-7yKOpnB04GTdZqCpSPnfK" height="350" >
+        <img src="https://drive.google.com/thumbnail?id=1YduIwbZBJJ-7yKOpnB04GTdZqCpSPnfK" height="450" >
+        <figcaption>DNA Extraction Buffer</figcaption>
       </figure>
       <figure class= "DNAFalcon" id= "DNAFalcon5">
-        <img src="https://drive.google.com/thumbnail?id=146iZhWj7X32jC2iCrqeHqUCwpk7OSp2u" height="350" >
+        <img src="https://drive.google.com/thumbnail?id=146iZhWj7X32jC2iCrqeHqUCwpk7OSp2u" height="450" >
       </figure>
       <figure class= "DNAFalcon" id= "DNAFalcon4">
-        <img src="https://drive.google.com/thumbnail?id=1SysrdquDVlcMi8HICE3o4hzsqqkY4pRA" height="350">
+        <img src="https://drive.google.com/thumbnail?id=1SysrdquDVlcMi8HICE3o4hzsqqkY4pRA" height="450">
       </figure>
 
       <figure class= "DNAFalcon" id= "DNAFalcon3">
-        <img src="https://drive.google.com/thumbnail?id=1hzB9WCussiWe5ZIsbDg-hMl14PJmRWqU" height="350" >
+        <img src="https://drive.google.com/thumbnail?id=1hzB9WCussiWe5ZIsbDg-hMl14PJmRWqU" height="450" >
       </figure>
 
       <figure class= "DNAFalcon" id= "DNAFalcon2">
-        <img src="https://drive.google.com/thumbnail?id=1bqum2-7_5lX91LrsYT_eCu-8gqH5ARA6" height="350" >
+        <img src="https://drive.google.com/thumbnail?id=1bqum2-7_5lX91LrsYT_eCu-8gqH5ARA6" height="450" >
       </figure>
 
       <figure class= "DNAFalcon" id= "DNAFalcon1">
-        <img src="https://drive.google.com/thumbnail?id=1wc6gwi5gZKrbaUQ8wbT77hC3v_C_XaDK" height="350">
+        <img src="https://drive.google.com/thumbnail?id=1wc6gwi5gZKrbaUQ8wbT77hC3v_C_XaDK" height="450">
       </figure>
 
 
@@ -324,7 +379,7 @@
       <input type = "button" ,class = "ADDext" id ="AddSDSAmount", value = "ADD" onclick="DNAExt('sds')">
       <input type = "number" , id = "waterAmount">
       <input type = "button" ,class = "ADDext" id ="AddwaterAmount", value = "ADD" onclick="DNAExt('water')">
-      <input type = "button" , id ="NextStage", value = "Go to Next Stage" onclick="DNAextStage2()">
+      <input type = "button" , id ="NextStage", value = "Go to next stage" onclick="DNAextStage2()">
 
     </div>
     <div id="DNAExtraction" >
@@ -401,8 +456,17 @@
       
 
     </div>
+</div>
 
+<div class="popup" id="popup-nanodrop">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="close-btn" onclick="togglePopup_nanodrop()">&times;</div>        
+  <img src= "https://drive.google.com/uc?id=1otyf_K9JC_3_UEgys6RB1s3vvMSZ0Ohh">
+  </div>
+</div> 
     <div id="nanodrop">
+        <p>You measured the DNA amount and purity with Nanodrop. <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_nanodrop()"></p>
       <table>
         <tr><th>Embryo</th><th>260/230</th><th>260/280</th><th>ng/&#181;l</th>
         </tr>
@@ -410,8 +474,26 @@
       </table>
       <input type = "button"  value = "Go to qPCR" id="GotoqPCR" onclick="gotoqpcr()">
     </div>
+    <div class="popup" id="popup-genotyping">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_genotyping()">&times;</div>        
+        <img src= "https://drive.google.com/uc?id=1AovhYQFp5KjScVPNaeeblbsIheD9hxbj">
+        </div>
+      </div>
+
+      <div class="popup" id="popup-mastermix">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_mastermix()">&times;</div>        
+        <img src= "https://drive.google.com/uc?id=1Gsh7FLw-zK5FbfbPtqcwoyiS5m8ZATQO">
+        </div>
+      </div>
+
+
 
     <div id = "QPCR">
+      Now we start genotyping with qPCR. <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_genotyping()"><br>
       Recipe for 10&#181;l  qPCR reaction mix (per sample);
       <ul>
         <li> 5 &#181;l SYBR Green Master mix </li>
@@ -421,7 +503,7 @@
         <li> 1 &#181;l Nuclease free water </li>
       </ul>
       Now we need to prepare master mix for each primer set. 
-      Calculate required amout of each ingredient for 10 samples.<br>
+      Calculate required amout of each ingredient for 5 samples. <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_mastermix()"><br>
       <em>Hint: Note that you will include two technical replicates.</em> 
      <table>
        <tr><th>Ingredient</th><th>S Primer Set</th><th>N Primer Set</th> </tr>
@@ -445,15 +527,22 @@
      <input type="button" id="mastermix" value = "Prepare Master mix"  onclick="Checkmastermix()">
 
     </div>
+    <div class="popup" id="popup-genotyping2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup_genotyping2()">&times;</div>        
+        <img src= "https://drive.google.com/uc?id=1kR1PHX6_DsBNq7C4IkVqOwWPhmbdLn_6">
+        </div>
+      </div>
 
     <div id = QPCRres>
 
-      We performed qPCR with 10 samples and 2 technical replicates per sample. We got the results as below.
-      Now we need to count wt, mutant and heterozygous. 
+      We performed qPCR with 2 technical replicates per sample. We got the results as below.
+      Now we need to count wt, mutant and heterozygous. <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_genotyping2()"> <br>
 
       <table>
-        <tr><th>Embryo</th><th>260/230</th><th>260/280</th><th>ng/&#181;l</th>
-          <th>S_CT1</th><th>S_CT2</th><th>N_CT1</th><th>N_CT2</th>
+        <tr><th>Embryo</th>
+          <th>S_CT1</th><th>S_CT2</th><th>N_CT1</th><th>N_CT2</th><th>Mean CT S</th><th>Mean CT N</th><th>Mean S - Mean N</th><th>Genotype</th>
         </tr>
         <tbody class = "table1" id ="tbody_2" ></tbody>
       </table>
