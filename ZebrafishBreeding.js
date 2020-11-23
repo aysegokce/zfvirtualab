@@ -14,6 +14,7 @@ function openCity(evt, cityName) {
     
   }
   
+  
   var BreedingSetupID=document.getElementById("BreedingSetup");
   var checkRadiomale ;
   var checkRadiofemale ;
@@ -479,10 +480,10 @@ function openCity(evt, cityName) {
       var chi = Math.pow((exp1-pred1), 2)/exp1 + Math.pow((exp2-pred2), 2)/exp2
       
        if (chi > 3.28){  
-       document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value > 0.05");
+       document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
        }
        else {
-       document.getElementById("demo").innerHTML= ("Chi-squared = " + chi + " p value < 0.05");
+       document.getElementById("demo").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
        }
   
        document.getElementById("GoGenotype").style.display = "block";
@@ -498,14 +499,14 @@ function openCity(evt, cityName) {
         var chi = Math.pow((exp1-pred1), 2)/exp1 + Math.pow((exp2-pred2), 2)/exp2+ Math.pow((exp3-pred3), 2)/exp3
         
          if (chi > 5.99){  
-         document.getElementById("demo3").innerHTML=("Chi-squared = " + chi + " p value > 0.05");
+         document.getElementById("demo3").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
          }
          else {
-         document.getElementById("demo3").innerHTML= ("Chi-squared = " + chi + " p value < 0.05");
+         document.getElementById("demo3").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
          }
     
-         document.getElementById("EnterPredGenType").style.display = "block";
-         document.getElementById("CheckGentypeID").style.display = "block";
+         document.getElementById("predictgenotype").style.display = "block";
+         
   
   
      }
@@ -783,7 +784,7 @@ function openCity(evt, cityName) {
       else if (gentype == "het"){
           for (i = 0; i<paralyzedVid.length; i++){
           var z =Math.random();
-          if (z<0.66){
+          if (z<0.33){
           var x = (Math.random()*3.75)+18.21;
   
           var temp={"name" : paralyzedVid[i],
@@ -924,6 +925,7 @@ function openCity(evt, cityName) {
       }
       else{
           alert (" Well done!!")
+          document.getElementById("refreshButton").style.display = "block";
       }
   }
   
