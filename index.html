@@ -16,10 +16,10 @@
   <button class="tablinks" id="TailTesttab">Tail Test</button>
   <button class="tablinks" id="Genotypingtab">Genotyping</button>
   
-  </div>
+  
+</div>
 
 <div id = "Home" >
-
   <p><h2>Introduction to ache mutants</h2>
     Acetylcholinesterase (ache) enzyme metabolizes acetylcholine, an important neurotransmitter with roles in neuromuscular activity, brain development, and cancer. 
     The role of ache in neuromuscular junction is shown below. Loss of function mutation in ache causes accumulation of acetylcholine which leads paralysis.
@@ -207,14 +207,14 @@
     <div id = "DevelopmentVideo">
         <h1> Zebrafish Developmental Stages </h1>
         <p>Watch timelapse microscopy recordings of Zebrafish developement for 72h <br>
-        Press Ready when you are ready to take quiz <hr>
+        Press Take Quiz when you are ready to take quiz <hr>
         <iframe  id = "ZfDevelopment"  width="893" height="502" src="https://www.youtube.com/embed/EeHiA98yUa4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
         <input type ="button" value = "Take Quiz" id="DevQuizButton" class = "actionbutton" onclick= "DevQuiz()">
       </div>  
 
       <div id ="DevelopmentQuiz">
-        <p>Please Enter Approximate developmental time point of shown embryo <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_devstages()"> </p>
+        <p>Please enter approximate developmental time point of shown embryo <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_devstages()"> </p>
           <img src="https://drive.google.com/thumbnail?id=1anE_yZSEmNZQmLQLIBjrOJLRrr5j-yjh" id="ZfDevPic" > 
           <input type= "number" id="DevQuizNum"> <p id = "hpf">hpf</p>
           <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >
@@ -585,7 +585,10 @@
     
     <button onclick="chiSquared(2)">Calculate</button>
 
-    <p id = "demo3"></p>
+    <p id = "demo3"> </p>
+    <div id = "predictgenotype">
+        <h2>Select the predicted genotype of the parents</h2>
+    
     <select size="1" id="EnterPredGenType">
       <option value="wt" selected="selected">
           wt x wt
@@ -599,7 +602,9 @@
   </select>
 
   <input type ="button" value = "Submit" id = "CheckGentypeID" onclick="CheckGentype()">
-  <button onClick="window.location.reload();">Refresh Page</button>
+
+  <input type id = "refreshButton" onclick="window.location.reload();" value = "New breeding setup" >
+</div>
 </div>
    
           </div>
