@@ -558,6 +558,7 @@ function openCity(evt, cityName) {
   
        if (ingred == "sds"){
           var amount = document.getElementById("SDSAmount").value;
+           alert(amount)
           if (amount == 1){
               alert("SDS is added");
               document.getElementById("DNAFalcon4").style.display="none"
