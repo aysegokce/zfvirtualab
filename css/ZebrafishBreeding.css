@@ -27,6 +27,7 @@ input[type=number]{
 
 
 
+
 .tab {
   overflow: hidden;
   background-color: rgba(114, 159, 185, 0.733);
@@ -46,9 +47,8 @@ input[type=number]{
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: rgba(2, 153, 240, 0.37);
-}
+
+/* Create an active/current tablink class */
 
 
 /* Style the tab content */
@@ -581,6 +581,19 @@ input[type=number]{
   display:none;
 }
 
+#predictgenotype{
+    display:none; 
+}
+
+#EnterPredGenType{
+    font-size: 22px;
+    left: 100px;
+}
+
+#refreshButton{
+    display:none; 
+    left : 500px;
+}
 
 .table1 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
