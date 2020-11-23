@@ -519,7 +519,7 @@ function openCity(evt, cityName) {
           
          var amount = document.getElementById("TrisAmount").value;
          
-         if (amount == 5){
+         if (amount == 2){
              alert("Tris is added");
              document.getElementById("DNAFalcon1").style.display="none"
              document.getElementById("EdtaAmount").style.display = "block";
@@ -532,7 +532,7 @@ function openCity(evt, cityName) {
   
       if (ingred == "edta"){
           var amount = document.getElementById("EdtaAmount").value;
-          if (amount == 5){
+          if (amount == 2){
               alert("EDTA is added");
               document.getElementById("DNAFalcon2").style.display="none"
               document.getElementById("NaclAmount").style.display = "block";
@@ -545,7 +545,7 @@ function openCity(evt, cityName) {
   
        if (ingred== "nacl"){
           var amount = document.getElementById("NaclAmount").value;
-          if (amount == 5){
+          if (amount == 4){
               alert("NaCl is added");
               document.getElementById("DNAFalcon3").style.display="none";
               document.getElementById("SDSAmount").style.display = "block";
@@ -558,7 +558,7 @@ function openCity(evt, cityName) {
   
        if (ingred == "sds"){
           var amount = document.getElementById("NaclAmount").value;
-          if (amount == 5){
+          if (amount == 1){
               alert("SDS is added");
               document.getElementById("DNAFalcon4").style.display="none"
               document.getElementById("waterAmount").style.display = "block";
@@ -571,7 +571,7 @@ function openCity(evt, cityName) {
   
        if (ingred == "water"){
           var amount = document.getElementById("waterAmount").value;
-          if (amount == 5){
+          if (amount == 11){
               alert("Water is added");
               document.getElementById("DNAFalcon5").style.display="none";
               document.getElementById("NextStage").style.display = "block";
