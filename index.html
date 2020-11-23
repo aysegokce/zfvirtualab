@@ -11,16 +11,16 @@
 <h1>Zebrafish Virtual Lab</h1>
 
 <div class="tab">
-   <button class="tablinks" onclick="openCity(event, 'Gender')">Breeding Setup</button>
-   <button class="tablinks" onclick="openCity(event, 'Development')">Development</button>
-  <button class="tablinks" onclick="openCity(event, 'TailTest')">Tail Test</button>
-  <button class="tablinks" onclick="openCity(event, 'Genotyping')">Genotyping</button>
+   <button class="tablinks" id="Gendertab">Breeding Setup</button>
+   <button class="tablinks" id="Developmenttab">Development</button>
+  <button class="tablinks" id="TailTesttab">Tail Test</button>
+  <button class="tablinks" id="Genotypingtab">Genotyping</button>
   
-  
-</div>
+  </div>
 
 <div id = "Home" >
-   <p><h2>Introduction to ache mutants</h2>
+
+  <p><h2>Introduction to ache mutants</h2>
     Acetylcholinesterase (ache) enzyme metabolizes acetylcholine, an important neurotransmitter with roles in neuromuscular activity, brain development, and cancer. 
     The role of ache in neuromuscular junction is shown below. Loss of function mutation in ache causes accumulation of acetylcholine which leads paralysis.
     <figure >
@@ -34,6 +34,8 @@
       
     
   </p>
+  
+  
   <input type ="button" id="button_Home" value="Start with breeding setup"  class = "actionbutton" onclick="openCity(event, 'Gender')">
 </div>
 
@@ -597,6 +599,7 @@
   </select>
 
   <input type ="button" value = "Submit" id = "CheckGentypeID" onclick="CheckGentype()">
+  <button onClick="window.location.reload();">Refresh Page</button>
 </div>
    
           </div>
