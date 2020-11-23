@@ -7,12 +7,12 @@ function openCity(evt, cityName) {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].style.backgroundColor = "rgba(114, 159, 185, 0.733)";
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    document.getElementById(cityName.concat("tab")).style.backgroundColor = "rgba(11, 91, 138, 0.877)";
+    
   }
-  
   
   var BreedingSetupID=document.getElementById("BreedingSetup");
   var checkRadiomale ;
@@ -356,7 +356,7 @@ function openCity(evt, cityName) {
   "https://drive.google.com/thumbnail?id=1IzICQrVuVbPM5CdVEbnkfbkN0J7ofmST",
   "https://drive.google.com/thumbnail?id=1yhKRTLcN9NNQbQuwR_I7o3D1DrPyoDiI",
   "https://drive.google.com/thumbnail?id=1zYGhG9Fqjf9cfqpPxeB_P67Hgp4EqzmH",
-  "https://drive.google.com/thumbnail?id=t1wJmGWA7QGSIQeStKoSOllB2e11Hw_zyv",
+  "https://drive.google.com/thumbnail?id=1wJmGWA7QGSIQeStKoSOllB2e11Hw_zyv",
   "https://drive.google.com/thumbnail?id=1WGJbUyvqAeZYlNh5cT5QsjrfWAOKUAdK",
   "https://drive.google.com/thumbnail?id=1jxchmL4UnUXs41JBZh2EIXHnOzXCwGoD",
   "https://drive.google.com/thumbnail?id=1GJVYxXn_8U_YSOrh99vHN0TcK9GC753E",
