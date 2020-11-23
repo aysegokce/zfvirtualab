@@ -479,10 +479,10 @@ function openCity(evt, cityName) {
       var chi = Math.pow((exp1-pred1), 2)/exp1 + Math.pow((exp2-pred2), 2)/exp2
       
        if (chi > 3.28){  
-       document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
+       document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value > 0.05");
        }
        else {
-       document.getElementById("demo").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+       document.getElementById("demo").innerHTML= ("Chi-squared = " + chi + " p value < 0.05");
        }
   
        document.getElementById("GoGenotype").style.display = "block";
@@ -498,10 +498,10 @@ function openCity(evt, cityName) {
         var chi = Math.pow((exp1-pred1), 2)/exp1 + Math.pow((exp2-pred2), 2)/exp2+ Math.pow((exp3-pred3), 2)/exp3
         
          if (chi > 5.99){  
-         document.getElementById("demo3").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
+         document.getElementById("demo3").innerHTML=("Chi-squared = " + chi + " p value > 0.05");
          }
          else {
-         document.getElementById("demo3").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+         document.getElementById("demo3").innerHTML= ("Chi-squared = " + chi + " p value < 0.05");
          }
     
          document.getElementById("EnterPredGenType").style.display = "block";
