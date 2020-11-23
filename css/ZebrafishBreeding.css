@@ -29,7 +29,7 @@ input[type=number]{
 
 .tab {
   overflow: hidden;
-  background-color: rgba(54, 125, 167, 0.877);
+  background-color: rgba(114, 159, 185, 0.733);
 }
 
 /* Style the buttons inside the tab */
@@ -50,10 +50,6 @@ input[type=number]{
   background-color: rgba(2, 153, 240, 0.37);
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: rgba(2, 153, 240, 0.719);
-}
 
 /* Style the tab content */
 .tabcontent {
