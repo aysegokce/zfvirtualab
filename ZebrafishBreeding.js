@@ -207,17 +207,24 @@ function openCity(evt, cityName) {
       day1ID.style.display= "block";
   }
   
-  
+  var E3amount =1;
   function E3mediumcheck(){
-      if ( document.getElementById("E3mediumID").value == "16.5"){
+      
+      if ( document.getElementById("E3mediumID").value >=16.6 & document.getElementById("E3mediumID").value <=16.7 ){
   
           alert("Correct!");
-          document.getElementById("demo2").innerHTML = "Now we have 1x E3 medium ready. <br> We collected embryos and placed them in petri dish with E3 medium";
+          document.getElementById("demo2").innerHTML = "Now we have 1X E3 medium ready. <br> We collected embryos and placed them in petri dish with E3 medium";
           document.getElementById("togglebutton2").style.display = "block";
   
       }
       else {
+        E3amount++;
           alert("Not Correct! Please calculate again");
+          if (E3amount == 4){
+            document.getElementById("demo2").innerHTML = "16.67ml 60X E3 required to prepare 1L 1X E3. Now we have 1X E3 medium ready. <br> We collected embryos and placed them in petri dish with E3 medium";
+            document.getElementById("togglebutton2").style.display = "block";
+
+          }
       }
   }
   
@@ -268,19 +275,27 @@ function openCity(evt, cityName) {
       document.getElementById("ZfDevPic").src = myPix[randomNum];  
       }
        
-  
+  var trial=1;
       function TestQuiz() {
   
-      if (quizCount < 2){
+      if (quizCount < 3){
              
       var devend = devEndArray[randomNum];
-      var devstart = devstartArray[randomNum];    
+      var devstart = devstartArray[randomNum]; 
+         
       if(document.getElementById("DevQuizNum").value <= devend && document.getElementById("DevQuizNum").value >= devstart ){
           alert("Close enough!");
           quizCount ++;
-          DevQuizRand();
+          trial=1;
+          if (quizcount < 2){DevQuizRand();}          
       }
-      else {alert("Try Again")}
+      else {
+          trial++
+          alert("Try Again")
+        if (trial == 4){
+            quizCount ++;
+        }
+    }
       
   }
   
@@ -464,8 +479,12 @@ function openCity(evt, cityName) {
   function GoChisquare(){
       document.getElementById("TailTestPred").style.display = "none";
       document.getElementById("ChiSquaredTest").style.display = "block";
-      document.getElementById("TailTestSumTable").rows[0].cells[0].innerHTML = paralyzed;
-      document.getElementById("TailTestSumTable").rows[0].cells[1].innerHTML = nonparalyzed;
+      document.getElementById("TailTestSumTable").rows[1].cells[0].innerHTML = paralyzed;
+      document.getElementById("TailTestSumTable").rows[1].cells[1].innerHTML = nonparalyzed;
+      document.getElementById("TailTestSumTable2").rows[1].cells[0].innerHTML = paralyzed;
+      document.getElementById("TailTestSumTable2").rows[1].cells[1].innerHTML = nonparalyzed;
+      document.getElementById("TailTestSumTable3").rows[1].cells[0].innerHTML = paralyzed;
+      document.getElementById("TailTestSumTable3").rows[1].cells[1].innerHTML = nonparalyzed;
      
   }
   
@@ -481,10 +500,15 @@ function openCity(evt, cityName) {
       
        if (chi > 3.28){  
        document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
-       }
+       document.getElementById("demo_b").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
+        
+    }
        else {
        document.getElementById("demo").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
-       }
+       document.getElementById("demo_b").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+       document.getElementById("demo_c").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+         
+    }
   
        document.getElementById("GoGenotype").style.display = "block";
      }
@@ -500,12 +524,17 @@ function openCity(evt, cityName) {
         
          if (chi > 5.99){  
          document.getElementById("demo3").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
-         }
+         document.getElementById("demo3_b").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
+         document.getElementById("demo3_c").innerHTML= ("Chi-squared = " + chi + " p value < 0.05");
+        
+        }
          else {
          document.getElementById("demo3").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
-         }
+         document.getElementById("demo3_b").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+         document.getElementById("demo3_c").innerHTML= ("Chi-squared = " + chi + " p value > 0.05");
+        }
     
-         document.getElementById("predictgenotype").style.display = "block";
+         document.getElementById("GotoSumpage").style.display = "block";
          
   
   
@@ -733,11 +762,11 @@ function openCity(evt, cityName) {
           var temp={"name" : testvid[i],
            "n260230": Math.ceil(( (Math.random()*1.67)+0.6 )*10)/10,
            "n260280":Math.ceil((  (Math.random()*0.25)+1.82)*10)/10 ,
-           "nng":Math.ceil(( (Math.random()*169)+30.6 )*10)/10,
-           "CT_1N":Math.ceil(x*10)/10,
-           "CT_2N": Math.ceil(( x + (Math.random()*2)-1)*10)/10,
-           "CT_1S":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
-           "CT_2S": Math.ceil(( x + (Math.random()*3)+8)*10)/10
+           "nng":Math.ceil(( (Math.random()*169)+30.6 )*10)/10,           
+           "CT_1N":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_2N": Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_1S":Math.ceil(x*10)/10,
+           "CT_2S": Math.ceil(( x + (Math.random()*2)-1)*10)/10
        }
        nanoQPCRres.push(temp);
       }  
@@ -753,11 +782,11 @@ function openCity(evt, cityName) {
           var temp={"name" : testvid[i],
            "n260230":Math.ceil(( (Math.random()*1.67)+0.6 )*10)/10,
            "n260280":Math.ceil(( (Math.random()*0.25)+1.82 )*10)/10,
-           "nng":Math.ceil(((Math.random()*169)+30.6 )*10)/10,
-           "CT_1N":Math.ceil(x*10)/10,
-           "CT_2N":Math.ceil(( x + (Math.random()*2)-1)*10)/10,
-           "CT_1S":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
-           "CT_2S":Math.ceil(( x + (Math.random()*3)+8)*10)/10
+           "nng":Math.ceil(((Math.random()*169)+30.6 )*10)/10,           
+           "CT_1N":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_2N": Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_1S":Math.ceil(x*10)/10,
+           "CT_2S": Math.ceil(( x + (Math.random()*2)-1)*10)/10
        }
   
        } else {
@@ -790,11 +819,11 @@ function openCity(evt, cityName) {
           var temp={"name" : paralyzedVid[i],
            "n260230": Math.ceil(((Math.random()*1.67)+0.6)*10)/10 ,
            "n260280": Math.ceil(((Math.random()*0.25)+1.82)*10)/10 ,
-           "nng":Math.ceil(((Math.random()*169)+30.6 )*10)/10,
-           "CT_1N":Math.ceil(( x)*10)/10,
-           "CT_2N": Math.ceil((x + (Math.random()*2)-1)*10)/10,
-           "CT_1S":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
-           "CT_2S":Math.ceil(( x + (Math.random()*3)+8)*10)/10
+           "nng":Math.ceil(((Math.random()*169)+30.6 )*10)/10,                      
+           "CT_1N":Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_2N": Math.ceil(( x + (Math.random()*3)+8)*10)/10,
+           "CT_1S":Math.ceil(x*10)/10,
+           "CT_2S": Math.ceil(( x + (Math.random()*2)-1)*10)/10
        }
   
        } else {
@@ -820,10 +849,10 @@ function openCity(evt, cityName) {
            "n260230": Math.ceil(((Math.random()*1.67)+0.6)*10)/10,
            "n260280": Math.ceil(((Math.random()*0.25)+1.82)*10)/10,
            "nng":Math.ceil(((Math.random()*169)+30.6)*10)/10,
-           "CT_1N": Math.ceil(((x+ Math.random()*3)+4)*10)/10 ,
-           "CT_2N": Math.ceil(((x + Math.random()*3)+4)*10)/10 ,
-           "CT_1S": Math.ceil((x )*10)/10 ,
-           "CT_2S": Math.ceil(((x + Math.random()*2)-1)*10)/10      
+           "CT_1N": Math.ceil((x )*10)/10 ,
+           "CT_2N": Math.ceil(((x + Math.random()*2)-1)*10)/10,
+           "CT_1S": Math.ceil(((x+ Math.random()*3)+4)*10)/10 ,
+           "CT_2S": Math.ceil(((x + Math.random()*3)+4)*10)/10      
   
        }
        nanoQPCRres.push(temp);
@@ -841,12 +870,12 @@ function openCity(evt, cityName) {
       
   
       if (order == 1){
-          nanodropRand()
+      nanodropRand()
       filtqPCRres =  nanoQPCRres.filter(function(hero) {
           
           return testvid.includes(hero.name);
       });
-      var globalCounter = 0;
+  
   var tbody = document.getElementById('tbody_1');
   
   for (var i = 0; i < Object.keys(filtqPCRres).length; i++) {
@@ -861,22 +890,43 @@ function openCity(evt, cityName) {
       }
   
       if (order == 2){
-          var globalCounter = 0;
-  var tbody = document.getElementById('tbody_2');
+  
+        var tbody = document.getElementById('tbody_2');
+        for (var i = 0; i < Object.keys(filtqPCRres).length; i++) {
+      
+          var selectgentype= "<select size='1'> <option selected='selected'>wild type </option> <option > heterozygote </option> <option > mutant </option> </select>"
+            
+            var tr = "<tr>";
+            tr += "<th>Embryo_" + i + "</th><td>" +
+             filtqPCRres[i].CT_1S.toString() + "</td><td>" + filtqPCRres[i].CT_2S.toString() + "</td><td>" +
+             filtqPCRres[i].CT_2N.toString() + "</td><td>"+ filtqPCRres[i].CT_1N.toString() + "</td><td>" + 
+             "<input type= 'number' id = 'mean_s'></input>" + "</td><td>"+ "<input type= 'number' id = 'mean_n'></input>" + "</td><td>" + 
+             "<input type= 'number' id = 'diff_sn'></input>" + "</td><td>"+ selectgentype +"</td></tr>";
+            
+            tbody.innerHTML += tr;
+        }    
+            }
+
+    if (order == 3){
+  
+  var tbody = document.getElementById('tbody_3');
   for (var i = 0; i < Object.keys(filtqPCRres).length; i++) {
 
-    var selectgentype= "<select size='1'> <option selected='selected'>wild type </option> <option > heterozygote </option> <option > mutant </option> </select>"
-      
+     
       var tr = "<tr>";
-      tr += "<th>Embryo_" + i + "</th><td>" +
+      tr += "<th>Embryo_" + i + "</th><td>" +filtqPCRres[i].n260230.toString()  + "</td>" + "<td>" +
+      filtqPCRres[i].n260280.toString()  +"</td><td>" + filtqPCRres[i].nng.toString()  +"</td><td>" +
        filtqPCRres[i].CT_1S.toString() + "</td><td>" + filtqPCRres[i].CT_2S.toString() + "</td><td>" +
-       filtqPCRres[i].CT_2N.toString() + "</td><td>"+ filtqPCRres[i].CT_1N.toString() + "</td><td>" + 
-       "<input type= 'number' id = 'mean_s'></input>" + "</td><td>"+ "<input type= 'number' id = 'mean_n'></input>" + "</td><td>" + 
-       "<input type= 'number' id = 'diff_sn'></input>" + "</td><td>"+ selectgentype +"</td></tr>";
-      
+       filtqPCRres[i].CT_2N.toString() + "</td><td>"+ filtqPCRres[i].CT_1N.toString() + "</td></tr>";      
       tbody.innerHTML += tr;
   }    
       }
+
+
+
+
+
+
   }
   
   function gotoqpcr(){
@@ -925,9 +975,76 @@ function openCity(evt, cityName) {
       }
       else{
           alert (" Well done!!")
+          document.getElementById("demo_cross2").innerHTML=("Selected Genotype of parents is " + gentype);
+          document.getElementById("printPDF").style.display = "block";
           document.getElementById("refreshButton").style.display = "block";
       }
   }
+
+  function printSummary(){
+    NanoDropTable(3)
+    document.getElementById("QPCRres").style.display = "none";
+    document.getElementById("SummaryPage").style.display = "block";
+    var female = checkRadiofemale.value;
+    var male = checkRadiomale.value;
+   
+     var pred1 = document.getElementById("pred1b").value;        
+     var pred2 = document.getElementById("pred2b").value;        
+    var pred3 = document.getElementById("pred3b").value;
+
+
+     if (female == "female_a"){
+         female =  "Female 1";
+     }
+     else if (female == "female_b"){
+        female =  "Female 2";
+    }
+    else if (female == "female_c"){
+        female =  "Female 3";
+    }
+    if (male == "male_a"){
+        male =  "male 1";
+    }
+    else if (male == "male_b"){
+       male =  "male 2";
+   }
+   else if (male == "male_c"){
+       male =  "male 3";
+   }
+    document.getElementById("crossF_cap").innerHTML=female;
+    document.getElementById("crossM_cap").innerHTML=male;
+    document.getElementById("demo_cross").innerHTML=(female + " x " +male);
+    document.getElementById("GenotypingSumTable").rows[1].cells[0].innerHTML = pred1;
+    document.getElementById("GenotypingSumTable").rows[1].cells[1].innerHTML = pred2;
+    document.getElementById("GenotypingSumTable").rows[1].cells[2].innerHTML = pred3;
+    
+    document.getElementById("GenotypingSumTable2").rows[1].cells[0].innerHTML = pred1;
+    document.getElementById("GenotypingSumTable2").rows[1].cells[1].innerHTML = pred2;
+    document.getElementById("GenotypingSumTable2").rows[1].cells[2].innerHTML = pred3;
+           
+
+  }
+
+  var doc = new jsPDF();
+  doc.setFontSize(9);
+
+
+function saveDiv(divId, title) {
+        doc.fromHTML(`<html><head><title>${title}</title></head><body>` + document.getElementById(divId).innerHTML + `</body></html>`,
+        );
+        doc.save('div.pdf');
+
+ 
+ doc.save('VirtualLabReport.pdf');
+}
+
+
+
+
+
+
+
+
   
   
   
