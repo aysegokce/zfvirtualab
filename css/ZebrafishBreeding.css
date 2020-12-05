@@ -23,7 +23,10 @@ input[type=number]{
   float: right;
   width: 250px;  
 }
-
+input[type="radio"]{
+  height:20px;
+    width:20px;
+}
 
 
 
@@ -55,6 +58,7 @@ input[type=number]{
   display: none;
   padding: 6px 12px;
   border-top: none;
+  margin: 0px 50px 0px 50px;
 }
 
 
@@ -66,6 +70,14 @@ input[type=number]{
 .BreedingSetupClass{
     display: none;
 }
+
+#intro{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 
 
@@ -199,10 +211,13 @@ input[type=number]{
 
 #ZfDevPic{
   position: absolute;
-  top: 150;
-  left : 50px;
+  top: 150;  
+  margin-left: auto;
+  margin-right: auto;
   height: 250px;
 }
+
+
 
 #hpf{
   position: absolute;
@@ -228,8 +243,11 @@ input[type=number]{
   display: none;
 }
 
+
+
 #TailTest2{
   display: none;
+
 }
 
 #GoGenotype{
@@ -415,17 +433,17 @@ input[type=number]{
 
 #embryo{
   position: absolute;
-  bottom: 400px;
+  top: 400px;
   left : 50px; 
 }
 #Buffer{
   position: absolute;
-  bottom: 400px;
+  top: 200px;
   left : 350px; 
 }
 #ProtainaseK{
   position: absolute;
-  bottom: 400px;
+  top: 300px;
   left : 700px; 
 }
 
@@ -587,6 +605,8 @@ input[type=number]{
 #EnterPredGenType{
     font-size: 22px;
     left: 100px;
+    width: 150px;
+    height: 50px;
 }
 
 #refreshButton{
@@ -699,3 +719,49 @@ input[type=number]{
   cursor: pointer;
 }
 
+#crossF_cap{
+  text-align: center;
+}
+
+#crossM_cap{
+  text-align: center;
+}
+
+#crossF{
+  position: absolute;
+  top: 200px;
+  left : 200px;
+  }
+
+  #crossM{
+    position: absolute;
+    top: 200px;
+    left : 650px;
+    }
+
+    #cross{
+      position: absolute;
+      top: 250px;
+      left : 550px;
+      }
+#summarydiv2{
+  position: absolute;
+  top: 400px;
+}
+#SummaryPage{
+  display:none;
+}
+
+#SummaryPage2{
+  display:none;
+}
+
+#GotoSumpage{
+  display:none;
+}
+
+.sumtables{
+  font-size:9;
+  width : 80%;
+
+}
