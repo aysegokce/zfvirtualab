@@ -5,12 +5,13 @@
   <title>Zebrafish Virtual Lab</title>
   <link rel="stylesheet" type="text/css" href="css/ZebrafishBreeding.css">
   <script src = "https://d3js.org/d3.v4.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 </head>
 <body>
 
 <h1>Zebrafish Virtual Lab</h1>
 
-<div class="tab">
+<div class="tab" >
    <button class="tablinks" id="Gendertab">Breeding Setup</button>
    <button class="tablinks" id="Developmenttab">Development</button>
   <button class="tablinks" id="TailTesttab">Tail Test</button>
@@ -19,13 +20,13 @@
   
 </div>
 
-<div id = "Home" >
+<div id = "Home" style = "margin:0px 50px 0px 50px">
   <p><h2>Introduction to ache mutants</h2>
     Acetylcholinesterase (ache) enzyme metabolizes acetylcholine, an important neurotransmitter with roles in neuromuscular activity, brain development, and cancer. 
     The role of ache in neuromuscular junction is shown below. Loss of function mutation in ache causes accumulation of acetylcholine which leads paralysis.
     <figure >
-        <img  src= "https://drive.google.com/uc?id=19lwPMiXaNclfRbzWPWd4LtJJzIY_OVwJ">
-          <figcaption>Role of ache in neuromuscular junction. 
+        <img id=intro  src= "https://drive.google.com/uc?id=1s2a9Pgpa1M8ftFof4ARxj6jurGsypetm">
+          <figcaption style ="text-align: center">Role of ache in neuromuscular junction. 
         </figcaption>
     </figure>
  <br>Zebrafish ache mutant has been discovered in 2002 by Behra et al.In homozygous individuals (ache-/-) acetylcholine hydrolysis is completely blocked and in heterozygotes, it is half the normal (ache+/-). Mutant embryos are the first mobile and after 72 hours post-fertilization becomes paralyzed enabling for identification of homozygous mutants. 
@@ -45,41 +46,41 @@
 
   <div id = "FishSelect" >
   <p>Please select one male and one female fish for breeding <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_sexdiff()"> <br> 
-  <table style= "width:80%">
+  <table style= "width:70%">
     <tr> <th>MALE</th>
       <th>FEMALE</th>
     </tr>
     <tr>
-      <td>
+      <td style="height:150px">
   <input type = radio name="male" id="male1" value = "male_a">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
           </label>
   </td>              
-<td>
+<td style="height:150px">
       <input type = radio name="female" id="female1" value = "female_a">
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px></label>
       </td>
       </tr>
     <tr>
-      <td>
+      <td style="height:150px">
   <input type = radio name="male" id="male1" value = "male_b">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
           </label>
   </td>              
-<td>
+<td style="height:150px">
       <input type = radio name="female" id="female1" value = "female_b">
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px></label>
       </td>
       </tr>
     <tr>
-      <td>
+      <td style="height:150px">
   <input type = radio name="male" id="male1" value = "male_c">
-    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px>
+    <label for= male1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
           </label>
   </td>              
-<td>
+<td style="height:150px">
       <input type = radio name="female" id="female1" value = "female_c" >
-    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" width = 200px></label>
+    <label for= female1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px></label>
       </td>
       </tr>
   </table>
@@ -118,7 +119,7 @@
       <img id = "setup3" src="https://drive.google.com/thumbnail?id=1unWNmgpEsOBokcO5pT84Xuw8gADNGUkP" onclick = "clicksetup(0)" > 
       <img id = "setup4" src="https://drive.google.com/thumbnail?id=18jpQwYAwiuDtNeHt1jfPeqcCEQvS_BTD" onclick = "clicksetup(0)"> 
       <img id = "setup6" src="https://drive.google.com/thumbnail?id=1Ru8x1xN3Ab-79_vlKl0SLWdyadisnRqd" onclick = "clicksetup(0)">
-      <img id = "setup5" src="https://drive.google.com/thumbnail?id=1ifDfNYOM_z9lDV98qP_lxbNMzxEc9gyJ" onclick = "clicksetup(0)">
+      <img id = "setup5" src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" onclick = "clicksetup(0)">
       <img id = "setupAll123456" class="setupAll" src="https://drive.google.com/thumbnail?id=1eUIQe_lLo4v8HHVxcMBOEpXRq2m4HPDf"> 
       <img id = "setupAll12345" class="setupAll" src="https://drive.google.com/thumbnail?id=1lZSMo1fhM1phBCrzJbfhf3f8Z7KSWm8y"> 
       <img id = "setupAll1234" class="setupAll" src="https://drive.google.com/thumbnail?id=1y37zLsEmwyxkiyNnRYLGJUZwaIdBpFVO" > 
@@ -130,7 +131,7 @@
         <div class="overlay"></div>
         <div class="content">
           <div class="close-btn" onclick="togglePopup_BreedingSetup1()">&times;</div>        
-        <img id ="BreedingSetupVideo1" src= "https://drive.google.com/uc?export=view&id=16lY370o2Z7msQu-SanoGazs_wUR262ab" >
+        <img id ="BreedingSetupVideo1" src= "https://drive.google.com/uc?id=16lY370o2Z7msQu-SanoGazs_wUR262ab" width="75%" >
         </div>
       </div> 
       <button id="togglebutton1" onclick="togglePopup_BreedingSetup1()">Ready</button> 
@@ -203,7 +204,7 @@
     
   </div>
 
-  <div id="Development" class="tabcontent">
+  <div id="Development" class="tabcontent" >
     <div id = "DevelopmentVideo">
         <h1> Zebrafish Developmental Stages </h1>
         <p>Watch timelapse microscopy recordings of Zebrafish developement for 72h <br>
@@ -213,11 +214,14 @@
         <input type ="button" value = "Take Quiz" id="DevQuizButton" class = "actionbutton" onclick= "DevQuiz()">
       </div>  
 
-      <div id ="DevelopmentQuiz">
+      <div id ="DevelopmentQuiz"  >
         <p>Please enter approximate developmental time point of shown embryo <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_devstages()"> </p>
           <img src="https://drive.google.com/thumbnail?id=1anE_yZSEmNZQmLQLIBjrOJLRrr5j-yjh" id="ZfDevPic" > 
+          
           <input type= "number" id="DevQuizNum"> <p id = "hpf">hpf</p>
-          <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >
+          <input type=button onclick="TestQuiz()" id="EnterTestQuiz" value="Enter" >  
+          
+          
           <input type = "button" id= "GoTailTest" value = "Proceed to tail test" onclick="openCity(event, 'TailTest')">
 
         </div>
@@ -299,7 +303,7 @@
       </table>
       <br> 
       
-      <button onclick="chiSquared(1)">Calculate</button>
+      <input type = "button"  onclick="chiSquared(1)" value = "Calculate">
       
       <p id="demo"></p>
 
@@ -470,7 +474,7 @@
       
 
     </div>
-</div>
+
 
 <div class="popup" id="popup-nanodrop">
   <div class="overlay"></div>
@@ -581,13 +585,120 @@
     </tr>
 
     </table>
-    <br> 
+    <br>   
+    <input type = "button"  onclick="chiSquared(2)" value= "Calculate">
+<p id = "demo3"> </p>
+    <input type = "button"  id="GotoSumpage" onclick = "printSummary()" value="Proceed to summary page">
     
-    <button onclick="chiSquared(2)">Calculate</button>
 
-    <p id = "demo3"> </p>
-    <div id = "predictgenotype">
-        <h2>Select the predicted genotype of the parents</h2>
+
+  </div>
+ 
+  <div id = "SummaryPage2">
+    
+    <h4>Selected Cross</h4>
+    
+    <p id="demo_cross"></p>    
+    
+    <hr>
+    <h4>Phenotyping Results</h4>
+     <table id="TailTestSumTable3" class = "sumtables">
+      <tr>
+      <th>Paralyzed </th> <th> NotParalyzed</th> </tr>
+      <tr>          
+        <td>Paralyzed</td>
+        <td>Notparalyzed</td>
+      </tr>
+    </table>
+    
+      <p id="demo_c"></p>
+    
+      <hr>
+    
+      <h4>Genotyping Results</h4>
+      <table class = "sumtables"  style='font-size:70%'>
+        <tr><th>Embryo</th><th>260/230</th><th>260/280</th><th>ng/&#181;l</th>
+          <th>S_CT1</th><th>S_CT2</th><th>N_CT1</th><th>N_CT2</th>
+        </tr>
+        <tbody id ="tbody_3" ></tbody>
+      </table>
+
+      <h4>Genotyping Summary</h4>
+      
+      <table id="GenotypingSumTable2" class = "sumtables">
+        <tr>
+        <th>Wild type </th> <th> Heterozygous</th><th> Mutant</th> </tr>
+        <tr>          
+          <td>Wild type</td>
+          <td>Heterozygous</td>
+          <td>Mutant</td>
+        </tr>  
+      </table>
+      <p id="demo3_c"></p>
+    
+      <hr>
+    
+      <h4 id="demo_cross2"></h4>
+    
+      
+    
+    
+    </div>
+    
+    
+     
+    </div>
+
+
+
+
+ <div id="editor"></div>
+<div id = "SummaryPage">
+    
+    <h2>Selected Cross</h2>
+
+    <figure id= "crossF">
+      <img src="https://drive.google.com/thumbnail?id=1wgeWWuugMz5RYGXQdm313MFfz54uu7Je" width = 250px>
+      <figcaption id="crossF_cap" >Female 1</figcaption>
+  </figure>
+  <img id = "cross" src="https://drive.google.com/thumbnail?id=1k7iJYOXwe1eq9ViRAIgE90CWvAmhLRcw" width = 50px>  
+  
+  <figure id= "crossM">
+    <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+    <figcaption id="crossM_cap">Male 1</figcaption>
+</figure>
+   
+<div id="summarydiv2">
+<hr>
+<h2>Phenotyping Results</h2>
+ <table id="TailTestSumTable2">
+  <tr>
+  <th>Paralyzed </th> <th> NotParalyzed</th> </tr>
+  <tr>          
+    <td>Paralyzed</td>
+    <td>Notparalyzed</td>
+  </tr>
+</table>
+
+  <p id="demo_b"></p>
+
+  <hr>
+
+  <h2>Genotyping Resuls</h2>
+  <table id="GenotypingSumTable">
+    <tr>
+    <th>Wild type </th> <th> Heterozygous</th><th> Mutant</th> </tr>
+    <tr>          
+      <td>Wild type </td>
+      <td>Heterozygous</td>
+      <td>Mutant</td>
+    </tr>  
+  </table>
+  <p id="demo3_b"></p>
+
+  <hr>
+
+     <h2>Select the predicted genotype of the parents</h2>
     
     <select size="1" id="EnterPredGenType">
       <option value="wt" selected="selected">
@@ -602,14 +713,16 @@
   </select>
 
   <input type ="button" value = "Submit" id = "CheckGentypeID" onclick="CheckGentype()">
+      <hr>
+      <input type="button" id = "printPDF" onclick="saveDiv('SummaryPage2','Virtual Lab Report')" value = "Download as PDF">
+      <input type="button" id = "refreshButton" onclick="window.location.reload();" value = "New breeding setup" >
+    
 
-  <input type id = "refreshButton" onclick="window.location.reload();" value = "New breeding setup" >
+
 </div>
-</div>
-   
           </div>
 
-          
+        </div>
           
          
 
