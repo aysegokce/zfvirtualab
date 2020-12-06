@@ -625,5 +625,9 @@ input[type="radio"]{
 .sumtables{
   font-size:9;
   width : 80%;
+}
+
+.tbody2_class{
+  width:80%;
 
 }
