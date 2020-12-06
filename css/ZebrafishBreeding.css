@@ -75,7 +75,7 @@ input[type="radio"]{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 40%;
 }
 
 
@@ -84,59 +84,60 @@ input[type="radio"]{
 
 #NextDay{
     display: none; 
-    position: absolute;
-    top: 700px;
-    left: 1150px;
+    float: right;
     font-size: 20;
 }
 
+.column {
+  float: left;
+  width: 15%;
+  padding-left: 10px;
+}
 
-#setup1 {
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    width: 220px;
-  }
-  #setup2 {
-    position: absolute;
-    top: 200px;
-    left: 350px;
-    width: 220px;
-  }
-  #setup3 {
-    position: absolute;
-    top: 200px;
-    left: 600px;
-    width: 220px;
-  }
-  #setup4 {
-    position: absolute;
-    top: 200px;
-    left: 850px;
-    width: 220px;
-  }
+.row{
+  position: relative;
+}
+.row::after {  
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  #setup5 {
-    position: absolute;
-    top: 200px;
-    left: 1100px;
-    width: 220px;
-  }  
+.setupAll{
+  display: block;
+  position: absolute;
+  top:400px;
+  margin-left: 40%;
+  width: 50%;
+  max-width: 650px;
+}
 
-  #setup6 {
-    position: absolute;
-    top: 200px;
-    left: 1350px;
-    width: 220px;
-  }  
+#zf_day1_before{
+  float:left;
+}
+#zf_day1_after{
+  display:none;
+  float:left;
+}
+
+#button3{
+  position:relative;
+  float:left;
+}
+
+#button_DevStages{
+  display : none;
+  float:left;
+  position:relative;
+}
+
+.row_Dead1::after {
+  content: "";
+  clear: both;
+  display: inline-block;
+}
 
 
-  .setupAll {
-    position: absolute;
-    top: 500px;
-    left: 450px;
-    width: 600px;
-  }
 
 .Day0Class{
   display: none; 
@@ -152,9 +153,7 @@ input[type="radio"]{
 
 #NextDay2{
   display: none;
-  position: absolute;
-  top: 500px;
-  left: 1300px;
+  float: right;
   width: 150px; 
   
 }
@@ -166,36 +165,9 @@ input[type="radio"]{
 
 
 
-#zf_day1_before{  
-  position: absolute;
-  top: 300px;
-  left: 150px;
-  width: 400px;  
-}
 
-#zf_day1_after{
-  display: none;
-  position: absolute;
-  top: 300px;
-  left: 1000px;
-  width: 400px;  
-}
 
-#button3{
-  
-  position: absolute;
-  top: 700px;
-  left: 700px;
-  width: 250px;  
-}
 
-#button_DevStages{
-  display : none;
-  
-  position: absolute;
-  top: 700px;
-  left: 1500px;
-}
 
 
 #DevelopmentQuiz {
@@ -257,174 +229,64 @@ input[type="radio"]{
   display: none;
 }
 
-#TrisFalcon{
-  position: absolute;
-  top: 400px;
-  left : 50px;  
+
+
+
+.falcon1{
+  display: block;
+  float: left;
+  width: 15%;
+  max-width: 220px;
+  padding-left: 10px;
 }
 
-#EdtaFalcon{
-  position: absolute;
-  top: 400px;
-  left : 300px;  
+#edtadiv{
+  display: none;
+}
+#nacldiv{
+  display: none;
 }
 
-#NaclFalcon{
-  position: absolute;
-  top: 400px;
-  left : 550px;  
+#sdsdiv{
+  display: none;
 }
-
-#SDSFalcon{
-  position: absolute;
-  top: 400px;
-  left : 800px;  
+#waterdiv{
+  display: none;
 }
-
-#waterFalcon{
-  position: absolute;
-
-  top: 400px;
-  left : 1050px;  
+#falcon2{
+  position: relative;
+  left:80%
 }
 
 .DNAFalcon{
   position: absolute;
-  top: 350px;
-  left : 1350px;  
+  top: -10px;
+  left :10px; 
+  width: 15%;
+  max-width: 150px; 
 }
 
-
-.ADDext{
-  font-size: 16;  
-  padding: 8px 16px;
+.amountclass{
+  width:35%;
+  margin-left:5%;
+}
+#falconID .ADDext{
+  float: right;
+  width: 35%;
+  font-size: large;  
+  padding: 5px 5px;
   margin: 2px 1px;
 }
 
-#TrisAmount{  
-  position: absolute;
-  top: 710px;
-  left : 65px; 
-  width : 90px;
-
-}
-#ml1{ 
-  position: absolute;
-  top: 695px;
-  left : 165px;
-
+.DNAextAddColum{
+  display:inline-block;
 }
 
-#EdtaAmount{
-  display : none;
+#NextStage{  
   position: absolute;
-  top: 710px;
-  left : 315px; 
-  width : 90px;
-
-}
-#ml2{  
-  display : none;
-  position: absolute;
-  top: 695px;
-  left : 415px;
-
-}
-
-#NaclAmount{
-  display : none;
-  position: absolute;
-  top: 710px;
-  left : 565px; 
-  width : 90px;
-
-}
-
-#ml3{ 
-  display : none; 
-  position: absolute;
-  top: 695px;
-  left : 665px;
-
-}
-
-#SDSAmount{
-  display : none;
-  position: absolute;
-  top: 710px;
-  left : 815px; 
-  width : 90px;
-
-}
-
-#ml4{
-  display : none;  
-  position: absolute;
-  top: 695px;
-  left : 915px;
-
-}
-
-#waterAmount{
-  display : none;
-  position: absolute;
-  top: 710px;
-  left : 1065px; 
-  width : 90px;
-
-}
-#ml5{
-  display : none;  
-  position: absolute;
-  top: 695px;
-  left : 1165px;
-
-}
-
-
-#AddTrisAmount{  
-  position: absolute;
-  top: 700px;
-  left : 185px; 
-
-}
-
-#AddEdtaAmount{
-  display : none;
-  position: absolute;
-  top: 700px;
-  left : 434px; 
-
-}
-
-#AddNaclAmount{
-  display : none;
-  position: absolute;
-  top: 700px;
-  left : 685px; 
-
-}
-
-#AddSDSAmount{
-  display : none;
-  position: absolute;
-  top: 700px;
-  left : 935px; 
-
-}
-#AddwaterAmount{
-  display : none;
-  position: absolute;
-  top: 700px;
-  left : 1185px; 
-
-}
-
-#NextStage{
-  display : none;
-  position: absolute;
-  top: 600px;
-  left : 1550px; 
+  display : block;
+  left :100px; 
+  margin-top: 600px;
 }
 
 #DNAExtraction{
@@ -450,8 +312,8 @@ input[type="radio"]{
 #HeatBlockimg{
   display: none;
   position: absolute;
-  top: 550px;
-  left : 1000px; 
+  top: 350px;
+  left : 720px; 
 }
 
 .eppendorf{  position: absolute;
@@ -493,8 +355,8 @@ input[type="radio"]{
 #DNAextDay2{
   display : none;
   position: absolute;
-  top: 550px;
-  left : 1450px; 
+  top: 700px;
+  left : 800px; 
 }
 
 
@@ -597,6 +459,11 @@ input[type="radio"]{
 #QPCRres{
   display:none;
 }
+#table.c {
+  table-layout: auto;
+  width: 100%;  
+}
+
 
 #predictgenotype{
     display:none; 
@@ -690,10 +557,8 @@ input[type="radio"]{
 }
 #togglebutton1{
   display: none;
-    position: absolute;
-    top: 700px;
-    left: 1150px;
-    background-color: rgba(54, 125, 167, 0.877);
+  float: right;
+  background-color: rgba(54, 125, 167, 0.877);
   font-size:20px;
   border: none;
   color: white;
@@ -705,10 +570,7 @@ input[type="radio"]{
 
 #togglebutton2{
   display: none;
-  position: absolute;
-  top: 500px;
-  left: 1300px;
-  width: 150px; 
+  float: right;
   background-color: rgba(54, 125, 167, 0.877);
   font-size:20px;
   border: none;
