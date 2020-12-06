@@ -53,6 +53,7 @@ function openCity(evt, cityName) {
   var setup4AllImg = document.getElementById("setupAll1234");
   var setup5AllImg = document.getElementById("setupAll12345");
   var setup6AllImg = document.getElementById("setupAll123456");
+
   
   var nextDayButton = document.getElementById("NextDay");
   
@@ -62,6 +63,7 @@ function openCity(evt, cityName) {
   
     function togglePopup_BreedingSetup1(){
       document.getElementById("popup-2").classList.toggle("active");
+      document.getElementById("togglebutton1").style.display="none";
       nextDayButton.style.display="block";
     }
     function togglePopup_BreedingSetup2(){
@@ -111,28 +113,14 @@ function openCity(evt, cityName) {
   
   function clicksetup(setupID){
       if (setupID == 1){
-          var moveStart = {"top": "500px",
-                           "left": "100px"};
-          var moveEnd   = {"top": "1000px",
-                          "left": "600px"};
-          var options        = {"duration": 1000};
-  
-          setup1Img.animate([moveStart, moveEnd], options)
           setup1Img.style.opacity = '0'
-          setup0AllImg.style.display = 'none'        
+          setup0AllImg.style.display = 'none';
           setup2Img.setAttribute("onclick", "clicksetup(2)")
       }
   
       else if (setupID == 2){
-          var moveStart = {"top": "500px",
-                           "left": "350px"};
-          var moveEnd   = {"top": "1000px",
-                          "left": "600px"};
-          var options        = {"duration": 1000};
-  
-          setup2Img.animate([moveStart, moveEnd], options)        
           setup2Img.style.opacity = '0'
-          setup1AllImg.style.display = "none"
+          setup1AllImg.style.display = "none";
           setup3Img.setAttribute("onclick", "clicksetup(3)")
       }
   
@@ -145,45 +133,25 @@ function openCity(evt, cityName) {
   
           setup3Img.animate([moveStart, moveEnd], options)        
           setup3Img.style.opacity = '0'
-          setup2AllImg.style.display = "none"
+          setup2AllImg.style.display = "none";
           setup4Img.setAttribute("onclick", "clicksetup(4)")
       }
       else if (setupID == 4){
-          var moveStart = {"top": "500px",
-                           "left": "850px"};
-          var moveEnd   = {"top": "1000px",
-                          "left": "600px"};
-          var options        = {"duration": 1000};
-  
-          setup4Img.animate([moveStart, moveEnd], options)
           setup4Img.style.opacity = '0'
-          setup3AllImg.style.display = "none"        
+          setup3AllImg.style.display = "none";       
           setup5Img.setAttribute("onclick", "clicksetup(5)")
       }
   
       else if (setupID == 5){
-          var moveStart = {"top": "500px",
-                           "left": "1100px"};
-          var moveEnd   = {"top": "1000px",
-                          "left": "600px"};
-          var options        = {"duration": 1000};
-  
-          setup5Img.animate([moveStart, moveEnd], options)
+
           setup5Img.style.opacity = '0'
-          setup4AllImg.style.display = "none"        
+          setup4AllImg.style.display = "none";       
           setup6Img.setAttribute("onclick", "clicksetup(6)")
       }
   
-      else if (setupID == 6){
-          var moveStart = {"top": "500px",
-                           "left": "1350px"};
-          var moveEnd   = {"top": "1000px",
-                          "left": "600px"};
-          var options        = {"duration": 1000};
-  
-          setup6Img.animate([moveStart, moveEnd], options)        
+      else if (setupID == 6){       
           setup6Img.style.opacity = '0'
-          setup5AllImg.style.display = "none"
+          setup5AllImg.style.display = "none";
           document.getElementById("togglebutton1").style.display="block"
   
       }
@@ -195,7 +163,7 @@ function openCity(evt, cityName) {
   var day0ID  = document.getElementById("Day0")
   function Day0(){
       BreedingSetupID.style.display= "none";
-  
+      document.getElementById("togglebutton1").style.display="none";
       day0ID.style.display= "block";
       
   }
@@ -287,7 +255,8 @@ function openCity(evt, cityName) {
           alert("Close enough!");
           quizCount ++;
           trial=1;
-          if (quizcount < 2){DevQuizRand();}          
+          if (quizCount < 3){
+              DevQuizRand();}          
       }
       else {
           trial++
@@ -498,9 +467,10 @@ function openCity(evt, cityName) {
       
       var chi = Math.pow((exp1-pred1), 2)/exp1 + Math.pow((exp2-pred2), 2)/exp2
       
-       if (chi > 3.28){  
+       if (chi > 3.84){  
        document.getElementById("demo").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
        document.getElementById("demo_b").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
+       document.getElementById("demo_c").innerHTML=("Chi-squared = " + chi + " p value < 0.05");
         
     }
        else {
@@ -552,9 +522,8 @@ function openCity(evt, cityName) {
          if (amount == 2){
              alert("Tris is added");
              document.getElementById("DNAFalcon1").style.display="none"
-             document.getElementById("EdtaAmount").style.display = "block";
-             document.getElementById("AddEdtaAmount").style.display = "block";
-             document.getElementById("ml2").style.display = "block";
+             document.getElementById("edtadiv").style.display = "block";
+             
          }
          else alert("Amount is not correct")
   
@@ -565,9 +534,8 @@ function openCity(evt, cityName) {
           if (amount == 2){
               alert("EDTA is added");
               document.getElementById("DNAFalcon2").style.display="none"
-              document.getElementById("NaclAmount").style.display = "block";
-              document.getElementById("AddNaclAmount").style.display = "block";
-              document.getElementById("ml3").style.display = "block";
+              document.getElementById("nacldiv").style.display = "block";
+              
           }
           else alert("Amount is not correct")
    
@@ -578,9 +546,8 @@ function openCity(evt, cityName) {
           if (amount == 4){
               alert("NaCl is added");
               document.getElementById("DNAFalcon3").style.display="none";
-              document.getElementById("SDSAmount").style.display = "block";
-              document.getElementById("AddSDSAmount").style.display = "block";
-              document.getElementById("ml4").style.display = "block";
+              document.getElementById("sdsdiv").style.display = "block";
+              
           }
           else alert("Amount is not correct")
    
@@ -591,9 +558,8 @@ function openCity(evt, cityName) {
           if (amount == 1){
               alert("SDS is added");
               document.getElementById("DNAFalcon4").style.display="none"
-              document.getElementById("waterAmount").style.display = "block";
-              document.getElementById("AddwaterAmount").style.display = "block";
-              document.getElementById("ml5").style.display = "block";
+              document.getElementById("waterdiv").style.display = "block";
+              
           }
           else alert("Amount is not correct")
    
