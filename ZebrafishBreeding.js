@@ -866,8 +866,8 @@ function openCity(evt, cityName) {
             tr += "<th>Embryo_" + i + "</th><td>" +
              filtqPCRres[i].CT_1S.toString() + "</td><td>" + filtqPCRres[i].CT_2S.toString() + "</td><td>" +
              filtqPCRres[i].CT_2N.toString() + "</td><td>"+ filtqPCRres[i].CT_1N.toString() + "</td><td>" + 
-             "<input type= 'number' id = 'mean_s'></input>" + "</td><td>"+ "<input type= 'number' id = 'mean_n'></input>" + "</td><td>" + 
-             "<input type= 'number' id = 'diff_sn'></input>" + "</td><td>"+ selectgentype +"</td></tr>";
+             "<input type= 'number' class='tbody2_class' id = 'mean_s'></input>" + "</td><td>"+ "<input type= 'number' class='tbody2_class' id = 'mean_n'></input>" + "</td><td>" + 
+             "<input type= 'number' class='tbody2_class' id = 'diff_sn'></input>" + "</td><td>"+ selectgentype +"</td></tr>";
             
             tbody.innerHTML += tr;
         }    
@@ -997,8 +997,7 @@ function openCity(evt, cityName) {
 
 function saveDiv(divId, title) {
         doc.fromHTML(`<html><head><title>${title}</title></head><body>` + document.getElementById(divId).innerHTML + `</body></html>`,
-        );
-        doc.save('div.pdf');
+        );    
 
  
  doc.save('VirtualLabReport.pdf');
